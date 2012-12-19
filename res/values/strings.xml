@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">A6</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">A6</string>
+	<string name="new_push_message">: nieuw bericht</string>
+</resources>
