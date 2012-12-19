@@ -17,4 +17,4 @@ voor tips om hem te versnellen.
 
 
 
-README.MD // VERSION 1.0 // LION_KING    
+README.MD // VERSION 1.0 // THESOCIALLIONS   
