@@ -1,4 +1,6 @@
+==
 A6
+==
 
 ==========
 INFO
@@ -10,11 +12,10 @@ Beschrijving: App voor afdeling vwo 6 van het OSG Sevenwolden, locatie Fedde Sch
 ==========
 TIPS
 ==========
-1) Installeer de Android SDK voor je aan de slag gaat: http://developer.android.com/sdk/index.html.
+1) Installeer de [Android SDK] voor je aan de slag gaat. (http://developer.android.com/sdk/index.html.)
 2) Android emulator is vreselijk traag. 
 Zie www.developer.com/ws/android/development-tools/haxm-speeds-up-the-android-emulator.html
 voor tips om hem te versnellen. 
 
-======================================
-README.MD // VERSION 1.0 // LION_KING    
-======================================
+
+*italic*README.MD // VERSION 1.0 // LION_KING    
