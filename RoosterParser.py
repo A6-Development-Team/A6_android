@@ -5,17 +5,17 @@
 import urllib
 
 #Bestand openen en de inhoud in een string dumpen
-RoosterBestand = open("Zermelo Rasterscherm.htm","r")
+RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/1.html")
 beginRooster = RoosterBestand.read()
 RoosterBestand.close()
 
 #Slecht geformatteerd rooster inladen
-nuttigGedeelteRooster = beginRooster.split('<td bgcolor="DCDCDC" nowrap="" style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[3]
+nuttigGedeelteRooster = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[3]
 
-leerlingKlas = beginRooster.split('<td bgcolor="DCDCDC" nowrap="" style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0]
-leerlingAchternaam = beginRooster.split('<td bgcolor="DCDCDC" nowrap="" style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0]
-leerlingVoornaam = nuttigGedeelteRooster.split("</td>")[0].lstrip().rstrip()
-
+leerlingKlas = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0].strip()
+leerlingAchternaam = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0].strip()
+leerlingVoornaam = nuttigGedeelteRooster.split("</TD>")[0].lstrip().rstrip()
+print "%s %s, %s" % (leerlingVoornaam, leerlingAchternaam, leerlingKlas)
 roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
 
 ##roosterRijen = roosterTabel.split("<tr>")[2:]
@@ -30,27 +30,16 @@ roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
 ##        dag = dag.rstrip("  </td>\n")
 #deze zooi wordt later belangrijk
 
+#deze zooi is belangrijk
 for i in range(9):
     roosterTabel = roosterTabel.replace("u0%s"%str(i+1),str(i+1))
-roosterTabel = roosterTabel.replace("""<tr>
-    <td style="background-color: rgb(220, 220, 220);">Uur\Dag</td>
-    <td style="background-color: rgb(220, 220, 220);">maandag</td>
-    <td style="background-color: rgb(220, 220, 220);">dinsdag</td>
-    <td style="background-color: rgb(220, 220, 220);">woensdag</td>
-    <td style="background-color: rgb(220, 220, 220);">donderdag</td>
-    <td style="background-color: rgb(220, 220, 220);">vrijdag</td>
-  </tr>""","""<tr>
-    <td style="background-color: rgb(220, 220, 220);"></td>
-    <td style="background-color: rgb(220, 220, 220);">Ma</td>
-    <td style="background-color: rgb(220, 220, 220);">Di</td>
-    <td style="background-color: rgb(220, 220, 220);">Wo</td>
-    <td style="background-color: rgb(220, 220, 220);">Do</td>
-    <td style="background-color: rgb(220, 220, 220);">Vr</td>
-  </tr>""")
-roosterTabel = roosterTabel.replace("MTU","mt")
-roosterTabel = roosterTabel.replace("<br>","<br />")
-roosterTabel = roosterTabel.split("""  <tr>
-    <td style="background-color: rgb(220, 220, 220);">u10</td>""")[0]
+
+Replacements = [("Uur\Dag",""),("MTU","mt"),("<br>","<br />"),("maandag","Ma"),("dinsdag","Di"),("woensdag","Wo"),("donderdag","Do"),("vrijdag","Vr")]
+
+for r in Replacements:
+    roosterTabel = roosterTabel.replace(r[0],r[1])
+
+roosterTabel = roosterTabel.split("""<td style="background-color: rgb(220, 220, 220);">u10</td>""")[0].rstrip().rstrip("<tr>")
 roosterTabel = roosterTabel + "\n</table>"
 beginHTML = """<!DOCTYPE html>
 <html>
