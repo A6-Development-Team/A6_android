@@ -3,6 +3,7 @@
 #MijnheerNeen
 #-------------------------------------------------------------------------------
 import urllib
+import shutil
 import os
 
 #Bestand openen en de inhoud in een string dumpen
@@ -72,11 +73,11 @@ while llnr < 704:
     </html>"""
     if "A6" in leerlingKlas:
         leerlingKlas = leerlingKlas[3].lower()
-
-        zelfMap =  os.path.realpath(__file__).rstrip("\\RoosterParser.py")
-        mapNaam = zelfMap + "/assets/www/rooster/%s/" % leerlingKlas
+        mapNaam = os.getcwd() + "/assets/www/rooster/%s/" % leerlingKlas
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
+            shutil.copyfile(os.getcwd() + "/jquery.mobile-1.2.0.min.css", mapNaam + "/jquery.mobile-1.2.0.min.css")
+            shutil.copyfile(os.getcwd() + "/js.min.js", mapNaam + "/js.min.js")
         NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaam),"w")
         NieuwBestand.write(beginHTML + '\n<table width="100%">' + roosterTabel + "\n" + eindHTML)
         NieuwBestand.close()
