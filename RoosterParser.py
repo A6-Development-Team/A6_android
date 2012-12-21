@@ -56,8 +56,8 @@ while llnr < 704:
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>%s</title>
-            <link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
-            <script src="js.min.js">
+            <link rel="stylesheet" href="../jquery.mobile-1.2.0.min.css" />
+            <script src="../js.min.js">
             </script>
 
         </head>
@@ -79,8 +79,6 @@ while llnr < 704:
         mapNaam = os.getcwd() + "/assets/www/rooster/%s/" % leerlingKlas
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
-            shutil.copyfile(os.getcwd() + "/jquery.mobile-1.2.0.min.css", mapNaam + "/jquery.mobile-1.2.0.min.css")
-            shutil.copyfile(os.getcwd() + "/js.min.js", mapNaam + "/js.min.js")
         NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaam),"w")
         NieuwBestand.write(beginHTML + '\n<table width="100%">' + roosterTabel + "\n" + eindHTML)
         NieuwBestand.close()
