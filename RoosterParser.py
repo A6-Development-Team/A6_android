@@ -5,6 +5,8 @@
 import urllib
 import shutil
 import os
+import unicodedata
+import string
 
 #Bestand openen en de inhoud in een string dumpen
 llnr = 0
@@ -19,9 +21,10 @@ while llnr < 704:
     nuttigGedeelteRooster = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[3]
 
     leerlingKlas = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0].strip()
-    leerlingAchternaam = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0].strip()
-    leerlingVoornaam = nuttigGedeelteRooster.split("</TD>")[0].lstrip().rstrip()
-    print "%s %s, %s" % (leerlingVoornaam, leerlingAchternaam, leerlingKlas)
+    leerlingAchternaam = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0].strip().decode("windows-1252")
+    leerlingVoornaam = nuttigGedeelteRooster.split("</TD>")[0].lstrip().rstrip().decode("windows-1252")
+    leerlingVoornaam = ''.join(x for x in unicodedata.normalize('NFKD', leerlingVoornaam) if x in (string.ascii_letters + "- ")) #Don't ask.
+    print "%d: %s %s, %s" % (llnr+1, leerlingVoornaam, leerlingAchternaam, leerlingKlas)
     roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
 
     ##roosterRijen = roosterTabel.split("<tr>")[2:]
