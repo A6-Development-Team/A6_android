@@ -15,6 +15,7 @@
 	    $(window).bind('pageshow', function() { TijdVolgendeUur(); });
 		TijdVolgendeUur();
 		$('#rooster').load(localStorage.leerling);
+		navigator.splashscreen.hide();
 	}
 	</script>
 	</head>
@@ -25,7 +26,7 @@
 	<div data-role="header" data-position="fixed">
 		<h1>Vandaag</h1>
 		<a href="#menu" data-rel="popup" data-transition="none">Menu</a>
-		<div data-role="popup" id="menu">
+			<div data-role="popup" id="menu">
 						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
 							<li data-icon="plus"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
 							<li data-icon="grid"><a href="roosters.html" data-transition="none" data-prefetch>Roosters</a></li>
@@ -33,48 +34,19 @@
 							<li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
 						</ul>
 	    </div>
-		
-		<a href="#tijden" data-rel="dialog" data-role="button" data-transition="none">Tijden</a>
-		
 	</div><!-- /header -->
 	<div data-role="header" data-theme="c"> 
 	<div id="tijdVerschil" style="text-align:center;line-height:2;height:30px;"></div> 
 	</div> 
 	<div data-role="content">	
 		<div id="rooster">
-		<p><a href="setup.html" data-role="button" data-transition="none" data-icon="arrow-r" data-iconpos="right">Stel rooster in</a></p>
+		<h3 style="text-align:center">Welkom bij A6</h3><br/>
+		<p><a href="setup.html" data-role="button" data-transition="none" data-icon="arrow-r" data-iconpos="right">Wie ben je?</a></p>
 		</div>
 		</div>
 	</div><!-- /content -->
 </div><!-- /page -->
 
-<div data-role="page" id="tijden">
-    <div data-role="header">
-        <h1>Lestijden</h1>
-    </div>
-	<div data-role="content">
-     		<div class="ui-grid-a">
-				<div class="ui-block-a" style="width:20%">
-				<center><b>1<br/>2<br/>3<br/> <br/>4<br/>5<br/> <br/>6<br/>7<br/> <br/>8<br/>9</b><center>
-				</div>
-				<div class="ui-block-b" style="width:80%">
-				<center>
-				8.10 - 9.00<br/>
-				9.00 - 9.50<br/>
-				9.50 - 10.40<br/>
-				<i>Pauze (15 min)</i><br/>
-				10.55 - 11.45<br/>
-				11.45 - 12.35<br/>
-				<i>Pauze (25 min)</i><br/>
-				13.00 - 13.50<br/>
-				13.50 - 14.40<br/>
-				<i>Pauze (10 min)</i><br/>
-				14.50 - 15.40<br/>
-				15.40 - 16.30
-				</center>
-				</div>
-			</div><!-- /grid-a -->
-		</div>
-</div><!-- /page -->
+
 
 </body>
