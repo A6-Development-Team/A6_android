@@ -29,11 +29,6 @@ def roosterverbouwing():
         leerlingVoornaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingVoornaam) if x in (string.ascii_letters + "- ")) #Don't ask.
         print "%d: %s %s, %s" % (llnr+1, leerlingVoornaam, leerlingAchternaam, leerlingKlas)
 
-        ##We're gonna fix those diacriticals for now, only for A6.
-        ##Ja, dit is slecht programmeren, but it works.
-        ##De twee diacriticals waarmee we te maken hebben, zijn &euml; en &eacute; in HTML.
-        ##We vissen de 4 leerlingen eruit die een diacritical hebben en veranderen hun voornaam gewoon door hun voornaam met een stukje HTML.
-
 
         roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
 
