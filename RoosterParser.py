@@ -129,9 +129,9 @@ from Tkinter import *
 
 def roosterverbouwing():
     #Bestand openen en de inhoud in een string dumpen
-    llnr = 99
+    llnr = 0
 
-    while llnr < 100:
+    while llnr < 704:
 
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
