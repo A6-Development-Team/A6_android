@@ -129,9 +129,9 @@ from Tkinter import *
 
 def roosterverbouwing():
     #Bestand openen en de inhoud in een string dumpen
-    llnr = 0
+    llnr = 99
 
-    while llnr < 704:
+    while llnr < 100:
 
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
@@ -173,15 +173,12 @@ def roosterverbouwing():
         roosterTabel += "\n</table>"
         roosterUren = roosterTabel.split("<tr>")[2:]
         for i in range(len(roosterUren)):
-            roosterUren[i] = ('<tr id="TTVLuur%s">' % str(i+1)) + roosterUren[i]
+            #roosterUren[i] = ('<tr id="TTVLuur%s">' % str(i+1)) + roosterUren[i]
             roosterDagen = roosterUren[i].split("<td>")
             for e in range(len(roosterDagen[1:])):
-                roosterDagen[e+1] = ('<td id="TTVLdag%s">' % str(e+1)) + roosterDagen[e+1]
+                roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
             roosterUren[i] = "".join(roosterDagen)
-#            print "".join(roosterDagen)
-#            print roosterUren[i]
-#            print "\n---------------------------------------------------\n"
-#        print roosterUren[3]
+
         RoosterTabel = "".join(roosterUren)
         beginHTML = u"""<!DOCTYPE html>
         <html>
