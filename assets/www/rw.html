@@ -12,13 +12,24 @@
 <body>
 <div data-role="page" class="pages" id="wijzigingen" >
     <div data-role="header">
-	<a href="index.html"  data-transition="none" data-icon="arrow-l" data-theme="a" data-role="button">Terug</a>
-        <h1>Wijzigingen</h1>
+		<a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
+			<div data-role="popup" id="menu">
+						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
+							<li data-icon="home"><a href="index.html" data-transition="none">Vandaag</a></li>
+							<li data-icon="boek"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
+							<li data-icon="grid"><a href="roosters.html" data-transition="none" data-prefetch>Roosters</a></li>
+							<li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptopuitleen</a></li>
+							<li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
+						</ul>
+			</div>     
+	<h1>Wijzigingen</h1>
     </div><!-- /header -->
-    <div data-role="content">
+    <div id="cont" data-role="content">
 		<div id="roosterw"></div>
 		<script type="text/javascript">
 				$('#roosterw').load('wijzigingen.html');
+				$('#cont').css("height", "100%");
+				$('#cont').css("background-color", "white");
 		</script>
     </div><!-- /content -->
 	

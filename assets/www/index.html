@@ -5,26 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<style type="text/css">
-	.ui-icon-laptop {
-	background-image: url("img/laptop.png");
-	}
-	
-	.ui-icon-boek {
-	background-image: url("img/boek.png");
-	}
-	
-	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	.ui-icon-laptop {
-		background-image: url("img/laptop@2x.png");
-		background-size: 18px 18px;
-	}
-	.ui-icon-boek {
-		background-image: url("img/boek@2x.png");
-		background-size: 18px 18px;
-	}
-    }
-	</style>
 	<script src="js/cordova-2.2.0.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
@@ -42,14 +22,13 @@
 <body onload="init();"> 
 
 <div data-role="page" id="vandaag">
-<div id="tap">
 	<div data-role="header" data-position="fixed">
 		<h1>Vandaag</h1>
-		<a href="#menu" data-rel="popup" data-transition="none">Menu</a>
+		<a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
 			<div data-role="popup" id="menu">
 						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
 							<li data-icon="boek"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
-							<li data-icon="grid"><a href="roosters.html" data-transition="none" data-prefetch>Roosters</a></li>
+							<li data-icon="grid"><a href="roosters.html" data-transition="none">Roosters</a></li>
 							<li data-icon="refresh"><a href="rw.html" data-transition="none">Wijzigingen</a></li>
 							<li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptopuitleen</a></li>
 							<li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
@@ -61,7 +40,7 @@
 	</div> 
 	<div data-role="content">	
 		<div id="rooster">
-		<h3 style="text-align:center">Welkom bij A6</h3><br/>
+		<h3 style="text-align:center">Welkom bij A6</h3>
 		<p><a href="setup.html" data-role="button" data-transition="none" data-icon="arrow-r" data-iconpos="right">Wie ben je?</a></p>
 		</div>
 		</div>

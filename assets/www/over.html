@@ -14,8 +14,17 @@
 <div data-role="page" id="over" >
 
 	<div data-role="header" data-position="fixed">
-	<a href="index.html"  data-transition="none" data-icon="arrow-l" data-theme="a" data-role="button">Terug</a>
-		<h1>Over</h1>
+		<a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
+			<div data-role="popup" id="menu">
+						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
+							<li data-icon="home"><a href="index.html" data-transition="none">Vandaag</a></li>
+							<li data-icon="boek"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
+							<li data-icon="grid"><a href="roosters.html" data-transition="none" data-prefetch>Roosters</a></li>
+							<li data-icon="refresh"><a href="rw.html" data-transition="none">Wijzigingen</a></li>
+							<li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptopuitleen</a></li>
+						</ul>
+			</div>     
+	<h1>Over</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
