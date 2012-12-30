@@ -111,6 +111,6 @@ start.pack(padx=5, pady=5, fill=X)
 venster.minsize(width=250, height=80)
 
 venster.title("RoosterParser")
-venster.iconbitmap(default="favicon.ico")
+#venster.iconbitmap(default="favicon.ico")
 venster.mainloop()
 
