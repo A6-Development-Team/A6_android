@@ -133,7 +133,7 @@ function TijdVolgendeUur() {
 			document.getElementById("TTVLhl").innerHTML = "-";
 		}
 
-		document.getElementById("tijdVerschil").innerHTML = "Nog <b>" + tijdVerschil + " minuten</b> tot " + lesUren[i].uurNaam;
+		document.getElementById("TTVLt").innerHTML = "Nog <b>" + tijdVerschil + " minuten</b> tot " + lesUren[i].uurNaam;
 		
 		TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + (lesUur + 1);
 
