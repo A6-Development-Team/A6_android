@@ -1,14 +1,48 @@
-function MultiReplace(str, match, repl) {
-	return str.split(match).join(repl);
-	/*str.replace() vervangt maar 1 keer godverdomme,
-	moet ik weer creatief gaan lopen doen om alle <br>'s eruit te krijgen*/
+function VakReplace(str) {
+    str = str.replace("wisA","Wiskunde A");
+    str = str.replace("wisB","Wiskunde B");
+    str = str.replace("wisC","Wiskunde C");
+    str = str.replace("wisD","Wiskunde D");
+    str = str.replace("nat","Natuurkunde");
+    str = str.replace("schk","Scheikunde");
+    str = str.replace("biol","Biologie");
+    str = str.replace("in","Informatica");
+    str = str.replace("lit","Literatuur");
+    str = str.replace("ak","Aardrijkskunde");
+    str = str.replace("ges","Geschiedenis");
+    str = str.replace("maw","Maatschappijwetenschappen");
+    str = str.replace("maat","Maatschappijleer");
+    str = str.replace("mu","Muziek");
+    str = str.replace("econ","Economie");
+    str = str.replace("fi","Filosofie");
+    str = str.replace("m&o","M&O");
+    str = str.replace("nezl","Nederlands");
+    str = str.replace("netl","Nederlands");
+    str = str.replace("enzl","Engels");
+    str = str.replace("entl","Engels");
+    str = str.replace("duzl","Duits");
+    str = str.replace("dutl","Duits");
+    str = str.replace("fazl","Frans");
+    str = str.replace("fatl","Frans");
+    str = str.replace("grtl","Grieks");
+    str = str.replace("latl","Latijn");
+    str = str.replace("lo","LO");
+    str = str.replace("ckv","CKV");
+    str = str.replace("kcv","KCV");
+    str = str.replace("anw","ANW");
+    str = str.replace("bevo","Bevo");
+    str = str.replace("te","Tekenen");
+    str = str.replace("bsm","BSM");
+    str = str.replace("tdd","Teamdagdeel");
+    return str;
+
 }
 function TijdVolgendeUur() {
 	var tijdNu = new Date(),
 	tijdVolgendeUur = new Date(),
 	lesUren = [],
     tijdVerschil;
-	tijdNu.setHours(10);
+	tijdNu.setHours(8);
 	tijdNu.setMinutes(39);
     tijdNu.setDate(28);
 	lesUren[0] = {
@@ -102,7 +136,8 @@ function TijdVolgendeUur() {
 			}
 		
 		var TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + lesUur;
-		
+		var TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
+
 		if (lesUur > 0){
 			if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
 				document.getElementById("TTVLhu").innerHTML = lesUur;
@@ -111,7 +146,7 @@ function TijdVolgendeUur() {
 			}else{
 				document.getElementById("TTVLhu").innerHTML = lesUur;
 				document.getElementById("TTVLhl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2];
-				document.getElementById("TTVLhv").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[0]}
+				document.getElementById("TTVLhv").innerHTML = TTVLvak}
 			//document.getElementById("lesNu").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")}
 		}else {
 		document.getElementById("TTVLhu").innerHTML = "-";
@@ -144,7 +179,7 @@ function TijdVolgendeUur() {
 		else { //of als je wel les hebt
 		document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
 		document.getElementById("TTVLvl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2];
-		document.getElementById("TTVLvv").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[0]}
+		document.getElementById("TTVLvv").innerHTML = TTVLvak}
 		//document.getElementById("lesVolgende").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")
 		
 		if (i == 3 || i == 6 || i == 9){ //pauze volgende uur
