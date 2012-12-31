@@ -145,7 +145,7 @@ function TijdVolgendeUur() {
 				document.getElementById("TTVLhl").innerHTML = "-"
 			}else{
 				document.getElementById("TTVLhu").innerHTML = lesUur;
-				document.getElementById("TTVLhl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2];
+				document.getElementById("TTVLhl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 				document.getElementById("TTVLhv").innerHTML = TTVLvak}
 			//document.getElementById("lesNu").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")}
 		}else {
@@ -178,7 +178,7 @@ function TijdVolgendeUur() {
 			document.getElementById("TTVLvl").innerHTML = "-"}
 		else { //of als je wel les hebt
 		document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
-		document.getElementById("TTVLvl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2];
+		document.getElementById("TTVLvl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 		document.getElementById("TTVLvv").innerHTML = TTVLvak}
 		//document.getElementById("lesVolgende").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")
 		
