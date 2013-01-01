@@ -42,9 +42,6 @@ function TijdVolgendeUur() {
 	tijdVolgendeUur = new Date(),
 	lesUren = [],
     tijdVerschil;
-	tijdNu.setHours(8);
-	tijdNu.setMinutes(39);
-    tijdNu.setDate(28);
 	lesUren[0] = {
 		uur : 8,
 		minuut : 10,
@@ -137,6 +134,7 @@ function TijdVolgendeUur() {
 		
 		var TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + lesUur;
 		var TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
+        var TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 
 		if (lesUur > 0){
 			if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
@@ -145,7 +143,8 @@ function TijdVolgendeUur() {
 				document.getElementById("TTVLhl").innerHTML = "-"
 			}else{
 				document.getElementById("TTVLhu").innerHTML = lesUur;
-				document.getElementById("TTVLhl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
+                if (TTVLlok.length > 2){document.getElementById("TTVLhl").innerHTML = TTVLlok}
+				else{document.getElementById("TTVLhl").innerHTML = "-"}
 				document.getElementById("TTVLhv").innerHTML = TTVLvak}
 			//document.getElementById("lesNu").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")}
 		}else {
@@ -171,6 +170,8 @@ function TijdVolgendeUur() {
 		document.getElementById("TTVLt").innerHTML = "Nog <b>" + tijdVerschil + " minuten</b> tot " + lesUren[i].uurNaam;
 		
 		TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + (lesUur + 1);
+        TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
+        TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 
 		if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
 			document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
@@ -178,7 +179,8 @@ function TijdVolgendeUur() {
 			document.getElementById("TTVLvl").innerHTML = "-"}
 		else { //of als je wel les hebt
 		document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
-		document.getElementById("TTVLvl").innerHTML = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
+        if (TTVLlok.length > 2){document.getElementById("TTVLvl").innerHTML = TTVLlok}
+        else{document.getElementById("TTVLvl").innerHTML = "-"}
 		document.getElementById("TTVLvv").innerHTML = TTVLvak}
 		//document.getElementById("lesVolgende").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")
 		
