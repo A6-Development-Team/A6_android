@@ -107,6 +107,7 @@ function TijdVolgendeUur() {
 		minuut : 30,
 		uurNaam : "einde lesdag"
 	};
+
 	if (tijdNu.getDay() !== 0 && tijdNu.getDay() !== 6) {
 		for (var i = 0; i < lesUren.length; i++) {
 			 tijdVerschil = (lesUren[i].uur - tijdNu.getHours()) * 60 + (lesUren[i].minuut - tijdNu.getMinutes());
@@ -119,6 +120,7 @@ function TijdVolgendeUur() {
 	} else {
 		 tijdVerschil = 0
 	}
+
 	if (tijdVerschil > 0) {
 
 		var lesUur = i;
@@ -131,27 +133,29 @@ function TijdVolgendeUur() {
 					}
 				}
 			}
-		
-		var TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + lesUur;
-		var TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
-        var TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
+
+		var TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + lesUur, TTVLvak, TTVLlok;
 
 		if (lesUur > 0){
-			if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
+
+
+            if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
 				document.getElementById("TTVLhu").innerHTML = lesUur;
 				document.getElementById("TTVLhv").innerHTML = "-----";
 				document.getElementById("TTVLhl").innerHTML = "-"
 			}else{
+                TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
+                TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 				document.getElementById("TTVLhu").innerHTML = lesUur;
                 if (TTVLlok.length > 2){document.getElementById("TTVLhl").innerHTML = TTVLlok}
 				else{document.getElementById("TTVLhl").innerHTML = "-"}
 				document.getElementById("TTVLhv").innerHTML = TTVLvak}
 			//document.getElementById("lesNu").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")}
 		}else {
-		document.getElementById("TTVLhu").innerHTML = "-";
-		document.getElementById("TTVLhv").innerHTML = "-----";
-		document.getElementById("TTVLhl").innerHTML = "-"
-		}
+        document.getElementById("TTVLhu").innerHTML = "-";
+        document.getElementById("TTVLhv").innerHTML = "-----";
+        document.getElementById("TTVLhl").innerHTML = "-"
+        }
 		
 		if (i == 4 || i == 7 || i == 10){
             if (i == 4) {
@@ -170,18 +174,19 @@ function TijdVolgendeUur() {
 		document.getElementById("TTVLt").innerHTML = "Nog <b>" + tijdVerschil + " minuten</b> tot " + lesUren[i].uurNaam;
 		
 		TTVLtag = "TTVLd" + tijdNu.getDay() + "u" + (lesUur + 1);
-        TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
-        TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
 
 		if (document.getElementById(TTVLtag).innerHTML == "&nbsp;"){ //in geval van tussenuur/uit
 			document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
 			document.getElementById("TTVLvv").innerHTML = "-----";
-			document.getElementById("TTVLvl").innerHTML = "-"}
-		else { //of als je wel les hebt
-		document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
-        if (TTVLlok.length > 2){document.getElementById("TTVLvl").innerHTML = TTVLlok}
-        else{document.getElementById("TTVLvl").innerHTML = "-"}
-		document.getElementById("TTVLvv").innerHTML = TTVLvak}
+			document.getElementById("TTVLvl").innerHTML = "-"
+        } else { //of als je wel les hebt
+            TTVLvak = VakReplace(document.getElementById(TTVLtag).innerHTML.split("<br>")[0]);
+            TTVLlok = document.getElementById(TTVLtag).innerHTML.split("<br>")[2].replace("1","");
+		    document.getElementById("TTVLvu").innerHTML = (lesUur + 1);
+            if (TTVLlok.length > 2){document.getElementById("TTVLvl").innerHTML = TTVLlok}
+            else{document.getElementById("TTVLvl").innerHTML = "-"}
+		    document.getElementById("TTVLvv").innerHTML = TTVLvak
+        }
 		//document.getElementById("lesVolgende").innerHTML = MultiReplace(document.getElementById(TTVLtag).innerHTML.replace("&nbsp;","--------"),"<br>"," ")
 		
 		if (i == 3 || i == 6 || i == 9){ //pauze volgende uur
@@ -191,7 +196,18 @@ function TijdVolgendeUur() {
 			document.getElementById("TTVLvv").innerHTML = "Pauze";
 			document.getElementById("TTVLvl").innerHTML = "-"
 		}
-		
 		/*Ok, dit is een absolute puinhoop, ik weet het. Voorlopig werkt het echter, en gezien mijn beperkte ervaring met Javascript, vind ik dat al heel wat.*/
-	}
+	} else {
+        document.getElementById("TTVLhu").innerHTML = "-";
+        document.getElementById("TTVLhv").innerHTML = "-----";
+        document.getElementById("TTVLhl").innerHTML = "-";
+
+        document.getElementById("TTVLt").innerHTML = "-------";
+
+        document.getElementById("TTVLvu").innerHTML = "-";
+        document.getElementById("TTVLvv").innerHTML = "-----";
+        document.getElementById("TTVLvl").innerHTML = "-";
+    }
+
+    document.getElementsByTagName("table")[0].style.visibility = "hidden";
 }
