@@ -15,7 +15,7 @@ function TijdVolgendeUur() {
     document.getElementsByTagName("table")[0].style.visibility = "hidden";}
 
 function TijdVerschil() {
-    var tijdVolgendeUur = new Date(),lesUren = [],tijdVerschil;
+    var lesUren = [],tijdVerschil;
     lesUren[0] = {uur : 8, minuut : 10, uurNaam : "1<sup>e</sup> uur"};     lesUren[1] = {uur : 9, minuut : 0, uurNaam : "2<sup>e</sup> uur"};
     lesUren[2] = {uur : 9, minuut : 50, uurNaam : "3<sup>e</sup> uur"};     lesUren[3] = {uur : 10, minuut : 40, uurNaam : "1<sup>e</sup> pauze"};
     lesUren[4] = {uur : 10, minuut : 55, uurNaam : "4<sup>e</sup> uur"};    lesUren[5] = {uur : 11, minuut : 45, uurNaam : "5<sup>e</sup> uur"};
@@ -27,8 +27,6 @@ function TijdVerschil() {
     for (var i = 0; i < lesUren.length; i++) {
         tijdVerschil = (lesUren[i].uur - tijdNu.getHours()) * 60 + (lesUren[i].minuut - tijdNu.getMinutes());
         if (tijdVerschil > 0) {
-            tijdVolgendeUur.setHours(lesUren[i].uur);
-            tijdVolgendeUur.setMinutes(lesUren[i].minuut);
             return [tijdVerschil, i];
         }
     }
@@ -36,16 +34,14 @@ function TijdVerschil() {
 function VakLokaal(u){
     var l,v;
     switch(u){ //hier wordt de shit voor het volgende uur ingevuld
-        case 0:
-            break; //geen huidig uur: dit doet niks, maar voorkomt gewoon dat de TTVLtag op u0 staat
+        case 0 || 13:
+            u = ""; break;
         case 4:
             u = "P1";v = "Pauze"; break;
         case 7:
             u = "P2"; v = "Pauze"; break;
         case 10:
             u = "P3"; v = "Pauze"; break;
-        case 13:
-            u = ""; break; //na einde lesdag: kan alleen door vu worden gehaald
         default:
             if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
             if (u > 6) {u -= 2}
@@ -66,13 +62,13 @@ function VakReplace(str) {
         "netl":"Nederlands",    "enzl":"Engels",        "entl":"Engels",        "duzl":"Duits",         "dutl":"Duits",         "fazl":"Frans",
         "fatl":"Frans",         "grtl":"Grieks",        "latl":"Latijn",        "lo":"LO",              "ckv":"CKV",            "kcv":"KCV",
         "anw":"ANW",            "bevo":"Bevo",          "te":"Tekenen",         "bsm":"BSM",            "tdd":"Teamdagdeel",    "mt":"Mentorles"};
-    for (var i in vakken){str = str.replace(i, vakken[i])}
+    for (var i in vakken){if (str == vakken[i]){ str = str.replace(i, vakken[i]);break;}}
     return str;} //vervangt vakcodes voor namen
 function WriteHTML(hu,hl,hv,vu,vl,vv,t){
     document.getElementById("TTVLhu").innerHTML = hu || "-";
     document.getElementById("TTVLhv").innerHTML = hv || "-----";
     document.getElementById("TTVLhl").innerHTML = hl || "-";
-    document.getElementById("TTVLt").innerHTML = t || "-------"; // t moet uitgebreid worden natuurlijk
+    document.getElementById("TTVLt").innerHTML = t || "-------";
     document.getElementById("TTVLvu").innerHTML = vu || "-";
     document.getElementById("TTVLvv").innerHTML = vv || "-----";
     document.getElementById("TTVLvl").innerHTML = vl || "-";} //schrijft de tags weg in het document: kan aangeroepen worden zonder argumenten of met "" voor elke lege tag
