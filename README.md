@@ -2,7 +2,7 @@
 
 ##INFO
 
-* Versie: 10.5 (Xi)
+* Versie: 11 (XI)
 * Platform: Android
 * Beschrijving: App voor afdeling vwo 6 van het OSG Sevenwolden, locatie Fedde Schurer.
 
