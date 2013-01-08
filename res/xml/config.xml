@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cordova>
     <access origin="http://127.0.0.1*"/>
+    <access origin="https://cp.pushwoosh.com" subdomains="true" />
     <log level="DEBUG"/>
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
@@ -24,6 +25,7 @@
     <plugin name="Echo" value="org.apache.cordova.Echo" />
     <plugin name="Globalization" value="org.apache.cordova.Globalization"/>
     <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser"/>
+    <plugin name="PushNotification" value="com.pushwoosh.plugin.pushnotifications.PushNotifications" onload="true"/>
 </plugins>
 </cordova>
 

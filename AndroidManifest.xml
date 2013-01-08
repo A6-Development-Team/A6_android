@@ -1,11 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leonmelein.a5"
-    android:versionCode="30"
-    android:versionName="XIi" >
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+    android:versionCode="31"
+    android:versionName="XIii" android:installLocation="preferExternal">
 
     <supports-screens 
     android:largeScreens="true" 
@@ -17,6 +13,39 @@
  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
  <uses-permission android:name="android.permission.INTERNET"/>
+ 
+  <!--library-->
+ <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+ 
+ <!-- GCM connects to Google Services. -->
+ <uses-permission android:name="android.permission.INTERNET"/>
+ 
+ <!-- GCM requires a Google account. -->
+ <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+ 
+ <!-- Keeps the processor from sleeping when a message is received. -->
+ <uses-permission android:name="android.permission.WAKE_LOCK"/>
+ 
+ <!--
+  Creates a custom permission so only this app can receive its messages.
+ 
+  NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+        where PACKAGE is the application's package name.
+ -->
+ <permission
+         android:name="com.leonmelein.a5.permission.C2D_MESSAGE"
+         android:protectionLevel="signature"/>
+ <uses-permission
+         android:name="com.leonmelein.a5.permission.C2D_MESSAGE"/>
+ 
+ <!-- This app has permission to register and receive data message. -->
+ <uses-permission
+         android:name="com.google.android.c2dm.permission.RECEIVE"/>
+ 
+ <!-- GCM requires Android SDK version 2.2 (API level 8.) or above. -->
+ <!-- The targetSdkVersion is optional, but it's always a good practice
+      to target higher versions. -->
+ <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17"/>
     
     <application
         android:icon="@drawable/ic_launcher"
@@ -27,10 +56,44 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" 
             android:launchMode="singleTop" >
             <intent-filter>
+            	<action android:name="com.leonmelein.a5.MESSAGE"/>
+         		<category android:name="android.intent.category.DEFAULT"/>
+     		</intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>  
+        <activity android:name="com.arellomobile.android.push.PushWebview"/>
+		 
+		<activity android:name="com.arellomobile.android.push.MessageActivity"/>
+		 
+		<activity android:name="com.arellomobile.android.push.PushHandlerActivity"/>
+		 
+		<!--
+		  BroadcastReceiver that will receive intents from GCM
+		  services and handle them to the custom IntentService.
+		 
+		  The com.google.android.c2dm.permission.SEND permission is necessary
+		  so only GCM services can send data messages for the app.
+		-->
+		<receiver
+		        android:name="com.google.android.gcm.GCMBroadcastReceiver"
+		        android:permission="com.google.android.c2dm.permission.SEND">
+		    <intent-filter>
+		        <!-- Receives the actual messages. -->
+		        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+		        <!-- Receives the registration id. -->
+		        <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+		        <category android:name="com.leonmelein.a5"/>
+		    </intent-filter>
+		</receiver>
+		 
+		<!--
+		  Application-specific subclass of PushGCMIntentService that will
+		  handle received messages.
+		-->
+		<service android:name="com.arellomobile.android.push.PushGCMIntentService"/>
     </application>
 
 </manifest>
