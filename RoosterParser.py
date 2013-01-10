@@ -5,16 +5,19 @@
 #-------------------------------------------------------------------------------
 import urllib, os, unicodedata, string, pickle
 from Tkinter import *
-
 def roosterverbouwing():
     #Bestand openen en de inhoud in een string dumpen
     llnr = 0
     leerlingenlijst = []
-    while llnr < 704:
-
+    while llnr < 800: #voor de zekerheid gaat ie tot 800, en niet altijd door...
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
         RoosterBestand.close()
+
+        if beginRooster[:14] == """<!DOCTYPE html""":
+            print "Done: 404 reached"
+            break;
+
 
         #Slecht geformatteerd rooster inladen
         nuttigGedeelteRooster = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[3]
