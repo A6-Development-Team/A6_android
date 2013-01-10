@@ -3,16 +3,13 @@
 #MijnheerNeen
 #thesociallions (A6 diacritical fix)
 #-------------------------------------------------------------------------------
-import urllib
-import os
-import unicodedata
-import string
+import urllib, os, unicodedata, string, pickle
 from Tkinter import *
 
 def roosterverbouwing():
     #Bestand openen en de inhoud in een string dumpen
     llnr = 0
-
+    leerlingenlijst = []
     while llnr < 704:
 
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/%s.html"%str(llnr+1))
@@ -22,10 +19,11 @@ def roosterverbouwing():
         #Slecht geformatteerd rooster inladen
         nuttigGedeelteRooster = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[3]
 
-        leerlingKlas = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0].strip()
+        leerlingKlas = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0].strip()[1:]
         leerlingAchternaam = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0].strip()
         leerlingVoornaam = nuttigGedeelteRooster.split("</TD>")[0].lstrip().rstrip()
         leerlingVoornaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingVoornaam) if x in (string.ascii_letters + "- ")) #Don't ask.
+        leerlingAchternaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingAchternaam) if x in (string.ascii_letters + "- "))
         print "%d: %s %s, %s" % (llnr+1, leerlingVoornaam, leerlingAchternaam, leerlingKlas)
 
         roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
@@ -87,16 +85,18 @@ def roosterverbouwing():
         </body>
         </html>"""
 
-        if "A6" in leerlingKlas:
-            print"  A6"
-            leerlingKlas = leerlingKlas[3].lower()
-            mapNaam = os.getcwd() + "/assets/www/rooster/%s/" % leerlingKlas
-            if not os.path.exists(mapNaam):
-                os.makedirs(mapNaam)
-            NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaamNormalised),"w")
-            NieuwBestand.write((beginHTML + u'\n<table width="100%">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
-            NieuwBestand.close()
+        mapNaam = os.getcwd() + "/assets/www/rooster/%s/%s/" % (leerlingKlas[:2],leerlingKlas[2:])
+        if not os.path.exists(mapNaam):
+            os.makedirs(mapNaam)
+        NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaamNormalised+leerlingAchternaamNormalised),"w")
+        NieuwBestand.write((beginHTML + u'\n<table width="100%">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
+        NieuwBestand.close()
+        leerlingenlijst.append((leerlingKlas,leerlingVoornaam,leerlingAchternaam))
         llnr += 1
+    LLbestand = open("leerlingenlijst","w")
+    LLbestand.write(pickle.dumps(leerlingenlijst))
+    LLbestand.close()
+
 
 def afsluiten():
     venster.destroy()
