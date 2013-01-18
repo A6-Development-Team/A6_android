@@ -12,7 +12,7 @@ function TijdVolgendeUur() {
     } else {
         WriteHTML(); //geen les, dan wordt er leeg geschreven.
     }
-    document.getElementsByTagName("table")[0].style.visibility = "hidden";}
+    /*Voor nu rammen we dat rooster wel even in een card, geen tijd of zin om uit te zoeken hoe we dat even netjes wegwerken. document.getElementsByTagName("table")[0].style.visibility = "hidden";*/}
 
 function TijdVerschil() {
     var lesUren = [],tijdVerschil;
@@ -46,6 +46,8 @@ function VakLokaal(u){
             if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
             if (u > 6) {u -= 2}
             if (u > 9) {u -= 3}
+            //alert("TTVLd"+ tijdNu.getDay() + "u" + u);
+            
             v = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u).innerHTML;
             if (v !="&nbsp;"){
                 l = v.split("<br>")[2].replace("1","");
