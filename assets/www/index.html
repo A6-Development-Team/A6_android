@@ -5,24 +5,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<link rel="stylesheet" href="css/Cards.min.css" />
+	<link rel="stylesheet" href="css/Cards.css" />
 	<script src="js/cordova-2.3.0.js"></script>
 	<script type="text/javascript" src="js/PushNotification.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/TTVL.js"></script>
 	<script type="text/javascript">
-	document.addEventListener("deviceready", push, true);
+	document.addEventListener("deviceready", initPushwoosh, true);
 	document.addEventListener("resume", TijdVolgendeUur, true);
-	
-	function init() {
-	    $(window).bind('pageshow', function() { TijdVolgendeUur(); });
-		$('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });
-	} 
-	
-	function push() {
-	if (localStorage.push != "no") {initPushwoosh();}
-	}
+	function init() { $(window).bind('pageshow', function() { TijdVolgendeUur(); }); $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
 	</script>
 </head>
 	
@@ -43,46 +35,47 @@
 	</div><!-- /header -->
 	<div data-role="content">	
     
-    <!--Lasciate ogne speranza, voi ch'intrate-->
-	<!--KOMT 'IE!-->
-	<!--Hier plempen we dus de TTVL info-->
-	<div id="comingupcard">
+    <!--Lasciate ogne speranza, voi ch'intrate--><!--KOMT 'IE!--><!--Hier plempen we dus de TTVL info-->
+	<div id="comingupcard" class="card">
 
-    <div id="ttvl">
-	<div id="welcome"><h2>Nu en straks</h2></div>
-        <div id="ttvl2">
+	<h2 class="titel">Nu en straks</h2>
 	<div class="ui-grid-b">
-			<div class="ui-block-a" style="width:15%;"> <h3><div id="TTVLhu" style="line-height:21px; margin-left:20px;"></div></h3> </div>
-			<div class="ui-block-b" style="width:70%;"> <b><div id="TTVLhv" style="text-align:center; line-height:56px"></div></b> </div>
-			<div class="ui-block-c" style="width:15%;"> <div id="TTVLhl" style="margin-right:20px; text-align:right; line-height:56px"></div> </div>
+        <!--Huidige uur-->
+			<div class="ui-block-a"> <h3><div id="TTVLhu" ></div></h3> </div>
+			<div class="ui-block-b"> <div id="TTVLhv"></div> </div>
+			<div class="ui-block-c"> <div id="TTVLhl"></div> </div>
+        <!--/Huidige uur-->
 		<!--TTVL-->
-			<div class="ui-block-a" style="width:15%;"><h3 style="font-weight:bold; ine-height:21px; margin-left:18px; font-family: "RobotoBoldCondensed";">&#9660;</h3></div>
-			<div class="ui-block-b" style="width:70%;"><div id="TTVLt" style="text-align:center; line-height:56px"></div></div>
-			<div class="ui-block-c" style="width:15%;"><h3 style="font-weight:bold; line-height:21px; text-align:right; margin-right:16px; font-family: "RobotoBoldCondensed";">&#9660;</h3></div>
+			<div class="ui-block-a"><h3 class="arrowL">&#9660;</h3></div>
+			<div class="ui-block-b"><div id="TTVLt"></div></div>
+			<div class="ui-block-c"><h3 class="arrowR">&#9660;</h3></div>
 		<!--/TTVL-->
 			<br/>
 		<!--Volgende uur-->
-			<div class="ui-block-a" style="width:15%;"><h3><div id="TTVLvu" style="line-height:20px; margin-left:20px"></div></h3></div>
-			<div class="ui-block-b" style="width:70%;"><b><div id="TTVLvv" style="text-align:center; line-height:56px"></div></b></div>
-			<div class="ui-block-c" style="width:15%;"> <div id="TTVLvl" style="margin-right:20px; text-align:right; line-height:56px"></div> </div>
+			<div class="ui-block-a"><h3><div id="TTVLvu"></div></h3></div>
+			<div class="ui-block-b"><div id="TTVLvv"></div></div>
+			<div class="ui-block-c"><div id="TTVLvl"></div></div>
 		<!--/Volgende uur-->
-		</div></div></div>
-    </div>
+	</div><!--/grid-->
+    </div><!--/card-->
 
-	<!--Dit zou dus helpful moeten zijn. Geen idee of dat het ook is, maar het is vulling.-->
-    <div id="helpfulcard" style="border-radius: 7.5px;">
-        <h2 id="helpfultitel" class="helpfultitel" style="margin-left:20px;">Handige info</h2>
-        <div data-role="controlgroup" id="helpfullist">
+   <!--Schedule // Omdat ik geen zin heb om dit helemaal netjes ergens weg te werken, heeft het rooster eerst maar even zijn eigen card.-->
+    <div id="schedulecard" class="card">
+        <h2 id="titel" class="titel">Rooster</h2>
+        <div class="contents" id="rooster" style="margin-left:20px; margin-right:20px;"><a href="setup.html" data-role="button">Stel rooster in</a></div>
+    </div>
+   <!--/Schedule-->
+
+	<!--HELPFUL // Dit zou dus helpful moeten zijn. Geen idee of dat het ook is, maar het is vulling.-->
+    <div id="helpfulcard" class="card">
+        <h2 id="helpfultitel" class="titel">Handige info</h2>
+        <div data-role="controlgroup" id="helpfullist" class="contents">
             <a href="rw.html" data-role="button" data-transition="none">Roosterwijzigingen</a>
-            <a href="#" data-role="button" onclick="window.open('https://files.itslearning.com/data/423/3904/P3docenten/index.html', 'random_string', 'location=no')" data-transition="none">Lerarenrooster</a>
+            <a href="#" data-role="button" onclick="window.open('https://files.itslearning.com/data/423/3904/P3docenten/index.html', '_blank')" data-transition="none">Lerarenrooster</a>
         </div>
     </div>
-
-	<!--En omdat ik geen zin heb om dit helemaal netjes ergens weg te werken, heeft het rooster eerst maar even zijn eigen card-->
-    <div id="schedulecard">
-            <h2 id="titel" class="titel">Rooster</h2>
-            <div id="rooster" style="margin-left:20px; margin-right:20px;"><a href="setup.html" data-role="button">Stel rooster in</a></div>
-    </div>
+    <!--/HELPFUL-->
 	</div><!-- /content -->
 </div><!-- /page -->
 </body>
+</html>
