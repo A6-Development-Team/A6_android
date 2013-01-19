@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-    <link rel="stylesheet" href="css/Cards.css" />
-	<script src="js/cordova-2.3.0.js"></script>
+	<script src="js/cordova-2.2.0.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 	<script type="text/javascript">
@@ -32,15 +31,11 @@
 			</div>     
 	<h1>Wijzigingen</h1>
     </div><!-- /header -->
-    <div data-role="content">
-
-        <div class="card" id="rwcard" style="background-color: black; min-width: 320px;">
-		<div id="roosterw" style="height:100%; margin: 5px;"></div>
+    <div id="cont" data-role="content" style="height:100%; background-color:white">
+		<div id="roosterw"></div>
 		<script type="text/javascript">
-				$('#roosterw').load('http://www.thesociallions.nl/rooster.php td'); //http://tt.omropfryslan.nl/teletext/ttpage.asp?pag=872
-                document.getElementsByTagName("td")[0].style.width = "50%";
+				$('#roosterw').load('http://tt.omropfryslan.nl/teletext/ttpage.asp?pag=872');
 		</script>
-        </div>
     </div><!-- /content -->
 	
 </div><!-- /page -->

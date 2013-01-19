@@ -68,7 +68,7 @@ function VakReplace(str) {
     return str;} //vervangt vakcodes voor namen
 function WriteHTML(hu,hl,hv,vu,vl,vv,t){
     document.getElementById("TTVLhu").innerHTML = hu || "-";
-    document.getElementById("TTVLhv").innerHTML = hv  || "-----";
+    document.getElementById("TTVLhv").innerHTML = hv || "-----";
     document.getElementById("TTVLhl").innerHTML = hl || "-";
     document.getElementById("TTVLt").innerHTML = t || "-------";
     document.getElementById("TTVLvu").innerHTML = vu || "-";
