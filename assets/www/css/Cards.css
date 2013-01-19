@@ -34,38 +34,39 @@
 
 }
 
-/*alleen test met nieuwe header*/
-@font-face {
-    font-family: 'BlackoutTwoAM';
-    src: url('../font/blackout_two_am-webfont.eot');
-    src: url('../font/blackout_two_am-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/blackout_two_am-webfont.woff') format('woff'),
-         url('../font/blackout_two_am-webfont.ttf') format('truetype'),
-         url('../font/blackout_two_am-webfont.svg#blackout_two_am') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 /*Applied styling*/
 /*EEN VIEZE SLOOT CSS OMDAT JQUERY MOBILE GEEN FATSOENLIJKE CONTENT STYLING HEEFT*/
 
 /*TTVL*/
-#comingupcard { background:#F8F8F8; border-style:solid; border-color:#BBBBBB; border-width:1px; border-radius: 7.5px; margin-bottom: 15px;  margin-top: 1px; height: 250px}
-#welcome { font-family: "RobotoLight"; margin-left: 20px; }
-#TTVLhu { font-family: "RobotoBoldCondensed"; }
-#TTVLhv { font-family: "RobotoMedium"; }
-#TTVLhl { font-family: "RobotoBoldCondensed"; }
-#TTVLvu { font-family: "RobotoBoldCondensed"; }
-#TTVLvv { font-family: "RobotoMedium"; }
-#TTVLvl { font-family: "RobotoBoldCondensed"; }
-#TTVLt { font-family: "RobotoLight"; }
+/*Ik ontdek nu nog eens dat CSS classes kent.... Maar goed: Card styling kan nu dus op een fatsoenlijke manier worden aangehaald.*/
+/***************************************************************CLASSES**************************************************************************************/
+/*div.card = Nieuwe card met juiste achtergrond, afgeronde hoeken, border en margin.*/
+/*h2.titel = Card title in H2 met juiste font en margin. (Ik gebruik geen div, omdat ik mezelf zo dwing om H2 elementjes te gebruiken voor die titels.)*/
+/*div.contents = Content styling in de kaart met juiste margin en font.*/
+/***********************************************************************************************************************************************************/
+div.card {border-radius: 7.5px; background:#F8F8F8; border-style:solid; border-color:#BBBBBB; border-width:1px; border-radius: 7.5px; margin-bottom: 15px; }
+h2.titel {font-family: "RobotoLight"; margin-left: 20px;}
+div.contents {font-family: "RobotoMedium"; margin-bottom: 20px;}
+div.ui-block-a {width: 15%;}
+div.ui-block-b {width: 70%;}
+div.ui-block-c { width: 15%; }
+h3.arrowL { font-weight:bold; line-height:21px; margin-left:18px; font-family: "RobotoBoldCondensed"; text-align: left;}
+h3.arrowR { font-weight:bold; line-height:21px; margin-right:18px; font-family: "RobotoBoldCondensed"; text-align: right;}
 
-/*Volledige rooster*/
-#schedulecard { background:#F8F8F8; border-style:solid; border-color:#BBBBBB; border-width:1px;border-radius: 7.5px; margin-bottom: 15px;}
-#titel { font-family: "RobotoLight"; margin-left: 20px;  }
-#rooster { font-family: "RobotoMedium"; margin-bottom:20px;}
+/*Nu komen we bij het echte TTVL gedeelte*/
+#comingupcard {margin-top: 1px; height: 250px;}
+
+#TTVLhu { font-family: "RobotoBoldCondensed"; line-height:21px; margin-left:20px; }
+#TTVLhv { font-family: "RobotoMedium"; text-align:center; line-height:56px; }
+#TTVLhl { font-family: "RobotoBoldCondensed"; margin-right:20px; text-align:right; line-height:56px; }
+
+#TTVLt { font-family: "RobotoLight"; text-align:center; line-height:56px; }
+
+#TTVLvu { font-family: "RobotoBoldCondensed"; line-height:20px; margin-left:20px; }
+#TTVLvv { font-family: "RobotoMedium"; text-align:center; line-height:56px; }
+#TTVLvl { font-family: "RobotoBoldCondensed"; margin-right:20px; text-align:right; line-height:56px; }
 
 /*Handigheidjes*/
-#helpfulcard { background:#F8F8F8; border-style:solid; border-color:#BBBBBB; border-width:1px;  margin-bottom: 15px;}
-#helpfultitel { font-family: "RobotoLight"; margin-left: 20px; }
-#helpfullist {margin-left: 10px; margin-right: 10px; }
+#helpfullist {margin-left: 10px; margin-right: 10px;}
+#cardrooster {margin-left: 10px; margin-right:10px}
+
