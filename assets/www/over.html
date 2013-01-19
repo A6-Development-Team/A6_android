@@ -1,45 +1,39 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>A6</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<script src="js/cordova-2.3.0.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.mobile-1.2.0.min.js"></script>
-</head> 
-
-<body> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+    <script src="js/cordova-2.3.0.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+</head>
+<body>
 <div data-role="page" id="over" >
-
-	<div data-role="header" data-position="fixed">
-		<a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
-			<div data-role="popup" id="menu">
-						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
-							<li data-icon="home"><a href="index.html" data-transition="none">Vandaag</a></li>
-							<li data-icon="boek"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
-							<li data-icon="grid"><a href="roosters.html" data-transition="none" >Roosters</a></li>
-							<li data-icon="refresh"><a href="rw.html" data-transition="none">Wijzigingen</a></li>
-							<li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptops</a></li>
-						</ul>
-			</div>     
-	<h1>Over</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">
-	<center><img src="img/icon.png"/></center>
-	<p style="text-align:center">Gemaakt door: <br/><a href="http://www.thesociallions.nl" target="_blank">The Social Lions</a><br/>
-	<a href="http://www.adfinitum.nl"> MijnheerNeen</a><br/><br/>
-	Bijgewerkt op 20 januari 2013.</p>
-
-	<ul data-role="listview" data-inset="true" data-theme="c">
-		<li data-role="divider" data-theme="a">Instellingen en info</li>
-		<li><a href="credits.html" data-transition="none">Credits</a></li>
-		<li><a href="privacy.html" data-transition="none">Privacy</a></li>
-		<li><a href="setup.html" data-transition="none">Vandaagscherm</a></li>
-	</ul>
-</div>
+    <div data-role="header" data-position="fixed">
+        <a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
+        <div data-role="popup" id="menu">
+            <ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
+                <li data-icon="home"><a href="index.html" data-transition="none">Vandaag</a></li>
+                <li data-icon="boek"><a href="samenvattingen.html" data-transition="none">Boekenplank</a></li>
+                <li data-icon="grid"><a href="roosters.html" data-transition="none" >Roosters</a></li>
+                <li data-icon="refresh"><a href="rw.html" data-transition="none">Wijzigingen</a></li>
+                <li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptops</a></li>
+            </ul>
+        </div>
+        <h1>Over</h1>
+    </div><!-- /header -->
+    <div data-role="content">
+        <div style="text-align: center;"><img src="img/icon.png"/></div>
+        <p style="text-align:center">Gemaakt door: <br/><a href="#" onclick="window.open('http://www.thesociallions.nl', 'random_string');">The Social Lions</a><br/><a href="#" onclick="window.open('http://www.adfinitum.nl', 'random_string');">MijnheerNeen</a><br/><br/>Bijgewerkt op 20 januari 2013.</p>
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li data-role="divider" data-theme="a">Instellingen en info</li>
+            <li><a href="credits.html" data-transition="none">Credits</a></li>
+            <li><a href="privacy.html" data-transition="none">Privacy</a></li>
+            <li><a href="setup.html" data-transition="none">Vandaagscherm</a></li>
+        </ul>
+    </div>
 </div><!-- /page -->
 </body>
 </html>

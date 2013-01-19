@@ -35,11 +35,18 @@
         <option value="$PROJECT_DIR$/js/TTVL.js" />
         <option value="$PROJECT_DIR$/js/pushonoff.js" />
         <option value="$PROJECT_DIR$/js/PushNotification.js" />
-        <option value="$PROJECT_DIR$/rw.html" />
+        <option value="$PROJECT_DIR$/credits.html" />
         <option value="$PROJECT_DIR$/laptop.html" />
+        <option value="$PROJECT_DIR$/privacy.html" />
+        <option value="$PROJECT_DIR$/roosters.html" />
+        <option value="$PROJECT_DIR$/samenvattingen.html" />
+        <option value="$PROJECT_DIR$/setup.html" />
+        <option value="$PROJECT_DIR$/tijden.html" />
         <option value="$PROJECT_DIR$/over.html" />
         <option value="$PROJECT_DIR$/css/Cards.css" />
+        <option value="$PROJECT_DIR$/css/Cards.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/rw.html" />
       </list>
     </option>
   </component>
@@ -91,7 +98,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -100,22 +106,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
-    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.laptop.html">
     <configuration default="false" name="laptop.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" value="file://$PROJECT_DIR$/laptop.html" />
       </JSDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
@@ -124,7 +141,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -159,6 +176,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="38072761-4340-4b6e-93ee-8d4587c218fb" name="Default" comment="" />
       <created>1358597912240</created>
       <updated>1358597912240</updated>
     </task>
@@ -168,22 +186,22 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.53069866" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.1006993" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12844037" sideWeight="0.9735744" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.49752998" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.09090909" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.49752998" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.09090909" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.49752998" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.53069866" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -243,57 +261,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.8530259">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roosters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0778626">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/credits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="43" selection-start="884" selection-end="884" vertical-scroll-proportion="0.36377245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TTVL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="126" selection-start="600" selection-end="658" vertical-scroll-proportion="0.2746186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rw.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="71" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.9071856">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laptop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="340" selection-end="340" vertical-scroll-proportion="0.23358779">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rooster/A5/A/GerkHijlkema.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="44" selection-start="819" selection-end="819" vertical-scroll-proportion="0.44356954">
@@ -303,9 +270,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/credits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="386" selection-end="386" vertical-scroll-proportion="0.23652695">
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laptop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="29" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5129771">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542">
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roosters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="21" selection-start="14602" selection-end="14602" vertical-scroll-proportion="-47.73077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samenvattingen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.67480916">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="7" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tijden.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="8" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/countdown.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/TTVL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="126" selection-start="600" selection-end="658" vertical-scroll-proportion="0.2760646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/over.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1547" selection-end="1547" vertical-scroll-proportion="0.5928144">
+        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542">
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -314,19 +365,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/Cards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="0" selection-end="3931" vertical-scroll-proportion="0.4493392">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="2386" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="41" selection-start="2840" selection-end="2840" vertical-scroll-proportion="0.46717557">
+        <state line="7" column="46" selection-start="258" selection-end="258" vertical-scroll-proportion="0.13129771">
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/Cards.css">
+    <entry file="file://$PROJECT_DIR$/rw.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="12" selection-start="1048" selection-end="1048" vertical-scroll-proportion="-0.32276657">
-          <folding />
+        <state line="11" column="35" selection-start="462" selection-end="462" vertical-scroll-proportion="0.27994013">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
