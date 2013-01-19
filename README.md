@@ -2,7 +2,7 @@
 
 ##INFO
 
-* Versie: 11 (XI)
+* IN AANBOUW: Versie 12 (XII)
 * Platform: Android
 * Beschrijving: App voor afdeling vwo 6 van het OSG Sevenwolden, locatie Fedde Schurer.
 
@@ -17,4 +17,4 @@ voor tips om hem te versnellen.
 
 
 
-*README.MD // VERSION 1.0 // THESOCIALLIONS*
+*README.MD // VERSION 1.1 // THESOCIALLIONS*
