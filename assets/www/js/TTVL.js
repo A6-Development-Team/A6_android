@@ -1,6 +1,7 @@
-var tijdNu = new Date(), n = document.getElementById("pauze").innerHTML;
+var tijdNu = new Date();
 
 function TijdVolgendeUur() {
+	n = document.getElementById("pauze").innerHTML;
     var tv = TijdVerschil(), t = tv[0], u = tv[1]; //beetje uitgedund: we willen functies zo weinig mogelijk aanroepen
     if (tijdNu.getDay() != 0 && tijdNu.getDay() != 6 && t > 0) {
         var hv = VakLokaal(u), hu = hv[0], hl = hv[2];
@@ -8,10 +9,11 @@ function TijdVolgendeUur() {
         var vv = VakLokaal(u+1), vu = vv[0], vl = vv[2];
         vv = vv[1];
 
-        WriteHTML(hu,hl,hv,vu,vl,vv,"Nog <b>"+t+"</b> minuten tot") //code inspection, y u so Stasi
-    } else {
+        WriteHTML(hu,hl,hv,vu,vl,vv,"Over <b>"+t+"</b> minuten"); //code inspection, y u so Stasi
+    } else if(n != undefined){ //undefined of andere falsy waarden afvangen
         var element = document.getElementById("comingupcard");
         element.parentNode.removeChild(element);
+        
     }
     /*Voor nu rammen we dat rooster wel even in een card, geen tijd of zin om uit te zoeken hoe we dat even netjes wegwerken. document.getElementsByTagName("table")[0].style.visibility = "hidden";*/}
 
@@ -33,7 +35,6 @@ function TijdVerschil() {
     lesUren[8] = {uur : 13, minuut : 50};    lesUren[9] = {uur : 14, minuut : 40};
     lesUren[10] = {uur : 14, minuut : 50};   lesUren[11] = {uur : 15, minuut : 40};
     lesUren[12] = {uur : 16, minuut : 30};}
-
     for (var i = 0; i < lesUren.length; i++) {
         tijdVerschil = (lesUren[i].uur - tijdNu.getHours()) * 60 + (lesUren[i].minuut - tijdNu.getMinutes());
         if (tijdVerschil > 0) {
@@ -43,26 +44,20 @@ function TijdVerschil() {
     return [0, 12];} //geeft verschil in tijd tussen nu en eind les, of 0 bij afgelopen les, alsmede de index van de les
 function VakLokaal(u){
     var l, v;
-    alert(n);
-
-    //noinspection FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS
+	if (n == "H"){
     switch(u){ //hier wordt de shit voor het volgende uur ingevuld
         case 0 || 13:
             u = ""; break;
         case 3:
-            if (n == "H"){u = "P1";v = "Pauze"; break;}
-        case 4:
-            if (n == "A"){u = "P1";v = "Pauze"; break;} //Deze mogelijke fallthroughs zijn bewust...
+            u = "P1";v = "Pauze"; break;
         case 6:
-            if (n == "H"){u = "P2";v = "Pauze"; break;}
-        case 7:
-            if (n == "A"){u = "P2";v = "Pauze"; break;}
+            u = "P2";v = "Pauze"; break;
         case 10:
             u = "P3"; v = "Pauze"; break;
         default:
         	if (u > 9) {u -= 3}
-        	else if (u > 6) {u -= 2}
-            else if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
+        	else if (u > 5) {u -= 2}
+            else if (u > 2) {u -= 1} //hu bijstellen voor uren na de pauzes
             
 
           	var roosterinhoud = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u);
@@ -75,7 +70,35 @@ function VakLokaal(u){
             } else {
                 v = "";
             }
+    }} else{
+        switch(u){ //hier wordt de shit voor het volgende uur ingevuld
+            case 0 || 13:
+                u = ""; break;
+            case 4:
+                u = "P1";v = "Pauze"; break; //Deze mogelijke fallthroughs zijn bewust...
+            case 7:
+                u = "P2";v = "Pauze"; break;
+            case 10:
+                u = "P3"; v = "Pauze"; break;
+            default:
+                    if (u > 9) {u -= 3}
+                    else if (u > 6) {u -= 2}
+                    else if (u > 3) {u -= 1}//hu bijstellen voor uren na de pauzes
+
+
+                var roosterinhoud = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u);
+                if (roosterinhoud != null){
+                    v = roosterinhoud.innerHTML;}
+                else{v="&nbsp;"}
+                if (v !="&nbsp;"){
+                    l = v.split("<br>")[2].replace("1","");
+                    v = VakReplace(v.split("<br>")[0]);
+                } else {
+                    v = "";
+                }
     }
+
+}
     return [u,v,l];
 } //plukt de lessen uit de tabel
 function VakReplace(str) {
@@ -100,4 +123,4 @@ function WriteHTML(hu,hl,hv,vu,vl,vv,t){
     document.getElementById("TTVLt").innerHTML = t || "-------";
     document.getElementById("TTVLvu").innerHTML = vu || "-";
     document.getElementById("TTVLvv").innerHTML = vv || "------";
-    document.getElementById("TTVLvl").innerHTML = vl || "-";} //schrijft de tags weg in het document: kan aangeroepen worden zonder argumenten of met "" voor elke lege tag
+    document.getElementById("TTVLvl").innerHTML = vl || "-";}//schrijft de tags weg in het document: kan aangeroepen worden zonder argumenten of met "" voor elke lege tag
