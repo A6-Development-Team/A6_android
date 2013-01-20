@@ -10,11 +10,13 @@
 	<script type="text/javascript" src="js/PushNotification.js"></script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
-	<script src="js/TTVL.olddebug.js"></script>
+	<script src="js/TTVL.js"></script>
 	<script type="text/javascript">
     document.addEventListener("resume", TijdVolgendeUur, true);
 	document.addEventListener("deviceready", initPushwoosh, true);
-	function init() { $(window).bind('pageshow', function() { TijdVolgendeUur(); }); $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
+	$(window).bind('pageshow', function() { init(); }); 
+	
+	function init() { $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
 	</script>
 </head>
 	
