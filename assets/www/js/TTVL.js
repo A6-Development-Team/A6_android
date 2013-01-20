@@ -47,12 +47,15 @@ function VakLokaal(u){
             if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
             if (u > 6) {u -= 2}
             if (u > 9) {u -= 3}
-            //alert("TTVLd"+ tijdNu.getDay() + "u" + u);
-            
-            v = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u).innerHTML;
+          	var roosterinhoud = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u);
+          	if (roosterinhoud != null){
+            v = roosterinhoud.innerHTML;}
+            else{v="&nbsp;"}
             if (v !="&nbsp;"){
                 l = v.split("<br>")[2].replace("1","");
                 v = VakReplace(v.split("<br>")[0]);
+            } else {
+                v = "";
             }
     }
     return [u,v,l];
@@ -65,13 +68,18 @@ function VakReplace(str) {
         "netl":"Nederlands",    "enzl":"Engels",        "entl":"Engels",        "duzl":"Duits",         "dutl":"Duits",         "fazl":"Frans",
         "fatl":"Frans",         "grtl":"Grieks",        "latl":"Latijn",        "lo":"LO",              "ckv":"CKV",            "kcv":"KCV",
         "anw":"ANW",            "bevo":"Bevo",          "te":"Tekenen",         "bsm":"BSM",            "tdd":"Teamdagdeel",    "mt":"Mentorles"};
-    for (var i in vakken){if (str == vakken[i]){ str = str.replace(i, vakken[i]);break;}}
+    for (var i in vakken){
+        if (str == i){
+            str = str.replace(i, vakken[i]);
+            break;
+        }
+    } //godverdomme Mier dit is valsspelen, je ramt hier serieus 4 statements op 1 regel?
     return str;} //vervangt vakcodes voor namen
 function WriteHTML(hu,hl,hv,vu,vl,vv,t){
     document.getElementById("TTVLhu").innerHTML = hu || "-";
-    document.getElementById("TTVLhv").innerHTML = hv  || "-----";
+    document.getElementById("TTVLhv").innerHTML = hv  || "------";
     document.getElementById("TTVLhl").innerHTML = hl || "-";
     document.getElementById("TTVLt").innerHTML = t || "-------";
     document.getElementById("TTVLvu").innerHTML = vu || "-";
-    document.getElementById("TTVLvv").innerHTML = vv || "-----";
+    document.getElementById("TTVLvv").innerHTML = vv || "------";
     document.getElementById("TTVLvl").innerHTML = vl || "-";} //schrijft de tags weg in het document: kan aangeroepen worden zonder argumenten of met "" voor elke lege tag
