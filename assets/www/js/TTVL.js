@@ -1,7 +1,7 @@
 var tijdNu = new Date();
 
 function TijdVolgendeUur() {
-	var t = TijdVerschil()[0], u = TijdVerschil()[1];
+    var tv = TijdVerschil(), t = tv[0], u = tv[1]; //beetje uitgedund: we willen functies zo weinig mogelijk aanroepen
     if (tijdNu.getDay() != 0 && tijdNu.getDay() != 6 && t > 0) {
         var hv = VakLokaal(u), hu = hv[0], hl = hv[2];
         hv = hv[1];
@@ -10,7 +10,8 @@ function TijdVolgendeUur() {
 
         WriteHTML(hu,hl,hv,vu,vl,vv,"Nog <b>"+t+"</b> minuten tot")
     } else {
-        WriteHTML(); //geen les, dan wordt er leeg geschreven.
+        var element = document.getElementById("comingupcard");
+        element.parentNode.removeChild(element);
     }
     /*Voor nu rammen we dat rooster wel even in een card, geen tijd of zin om uit te zoeken hoe we dat even netjes wegwerken. document.getElementsByTagName("table")[0].style.visibility = "hidden";*/}
 
