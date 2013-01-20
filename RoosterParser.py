@@ -10,7 +10,7 @@ def roosterverbouwing():
     llnr = 0
     leerlingenlijst = []
     while llnr < 800: #voor de zekerheid gaat ie tot 800, en niet altijd door...
-        RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P2bovenbouw/%s.html"%str(llnr+1))
+        RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P3bovenbouw/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
         RoosterBestand.close()
 
