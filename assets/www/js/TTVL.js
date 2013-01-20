@@ -1,4 +1,4 @@
-var tijdNu = new Date();
+var tijdNu = new Date(), n = document.getElementById("pauze").innerHTML;
 
 function TijdVolgendeUur() {
     var tv = TijdVerschil(), t = tv[0], u = tv[1]; //beetje uitgedund: we willen functies zo weinig mogelijk aanroepen
@@ -8,7 +8,7 @@ function TijdVolgendeUur() {
         var vv = VakLokaal(u+1), vu = vv[0], vl = vv[2];
         vv = vv[1];
 
-        WriteHTML(hu,hl,hv,vu,vl,vv,"Nog <b>"+t+"</b> minuten tot")
+        WriteHTML(hu,hl,hv,vu,vl,vv,"Nog <b>"+t+"</b> minuten tot") //code inspection, y u so Stasi
     } else {
         var element = document.getElementById("comingupcard");
         element.parentNode.removeChild(element);
@@ -17,13 +17,22 @@ function TijdVolgendeUur() {
 
 function TijdVerschil() {
     var lesUren = [],tijdVerschil;
+    if (n == "A"){
     lesUren[0] = {uur : 8, minuut : 10, uurNaam : "1<sup>e</sup> uur"};     lesUren[1] = {uur : 9, minuut : 0, uurNaam : "2<sup>e</sup> uur"};
     lesUren[2] = {uur : 9, minuut : 50, uurNaam : "3<sup>e</sup> uur"};     lesUren[3] = {uur : 10, minuut : 40, uurNaam : "1<sup>e</sup> pauze"};
     lesUren[4] = {uur : 10, minuut : 55, uurNaam : "4<sup>e</sup> uur"};    lesUren[5] = {uur : 11, minuut : 45, uurNaam : "5<sup>e</sup> uur"};
     lesUren[6] = {uur : 12, minuut : 35, uurNaam : "2<sup>e</sup> pauze"};  lesUren[7] = {uur : 13, minuut : 0, uurNaam : "6<sup>e</sup> uur"};
     lesUren[8] = {uur : 13, minuut : 50, uurNaam : "7<sup>e</sup> uur"};    lesUren[9] = {uur : 14, minuut : 40, uurNaam : "3<sup>e</sup> pauze"};
     lesUren[10] = {uur : 14, minuut : 50, uurNaam : "8<sup>e</sup> uur"};   lesUren[11] = {uur : 15, minuut : 40, uurNaam : "9<sup>e</sup> uur"};
-    lesUren[12] = {uur : 16, minuut : 30, uurNaam : "einde lesdag"};
+    lesUren[12] = {uur : 16, minuut : 30, uurNaam : "einde lesdag"};}
+    else if (n == "H"){
+    lesUren[0] = {uur : 8, minuut : 10};     lesUren[1] = {uur : 9, minuut : 0};
+    lesUren[2] = {uur : 9, minuut : 50};     lesUren[3] = {uur : 10, minuut : 5};
+    lesUren[4] = {uur : 10, minuut : 55};    lesUren[5] = {uur : 11, minuut : 45};
+    lesUren[6] = {uur : 12, minuut : 10};  lesUren[7] = {uur : 13, minuut : 0};
+    lesUren[8] = {uur : 13, minuut : 50};    lesUren[9] = {uur : 14, minuut : 40};
+    lesUren[10] = {uur : 14, minuut : 50};   lesUren[11] = {uur : 15, minuut : 40};
+    lesUren[12] = {uur : 16, minuut : 30};}
 
     for (var i = 0; i < lesUren.length; i++) {
         tijdVerschil = (lesUren[i].uur - tijdNu.getHours()) * 60 + (lesUren[i].minuut - tijdNu.getMinutes());
@@ -33,14 +42,21 @@ function TijdVerschil() {
     }
     return [0, 12];} //geeft verschil in tijd tussen nu en eind les, of 0 bij afgelopen les, alsmede de index van de les
 function VakLokaal(u){
-    var l,v;
+    var l, v;
+    alert(n);
+
+    //noinspection FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS,FallthroughInSwitchStatementJS
     switch(u){ //hier wordt de shit voor het volgende uur ingevuld
         case 0 || 13:
             u = ""; break;
+        case 3:
+            if (n == "H"){u = "P1";v = "Pauze"; break;}
         case 4:
-            u = "P1";v = "Pauze"; break;
+            if (n == "A"){u = "P1";v = "Pauze"; break;} //Deze mogelijke fallthroughs zijn bewust...
+        case 6:
+            if (n == "H"){u = "P2";v = "Pauze"; break;}
         case 7:
-            u = "P2"; v = "Pauze"; break;
+            if (n == "A"){u = "P2";v = "Pauze"; break;}
         case 10:
             u = "P3"; v = "Pauze"; break;
         default:
@@ -48,7 +64,7 @@ function VakLokaal(u){
         	else if (u > 6) {u -= 2}
             else if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
             
-            
+
           	var roosterinhoud = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u);
           	if (roosterinhoud != null){
             v = roosterinhoud.innerHTML;}

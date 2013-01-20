@@ -16,7 +16,7 @@ def roosterverbouwing():
 
         if beginRooster[:14] == """<!DOCTYPE html""":
             print "Done: 404 reached"
-            break;
+            break
 
 
         #Slecht geformatteerd rooster inladen
@@ -56,7 +56,7 @@ def roosterverbouwing():
         roosterTabel += "\n</table>"
         roosterUren = roosterTabel.split("<tr>")[2:]
         for i in range(len(roosterUren)):
-            #roosterUren[i] = ('<tr id="TTVLuur%s">' % str(i+1)) + roosterUren[i]
+            roosterUren[i] = "<tr>" + roosterUren[i]
             roosterDagen = roosterUren[i].split("<td>")
             for e in range(len(roosterDagen[1:])):
                 roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
@@ -69,8 +69,8 @@ def roosterverbouwing():
         		<meta charset="utf-8" />
         		<meta name="viewport" content="width=device-width, initial-scale=1" />
         		<title>%s</title>
-        		<link rel="stylesheet" href="../jquery.mobile-1.2.0.min.css" />
-        		<script src="../js.min.js">
+        		<link rel="stylesheet" href="../../jquery.mobile-1.2.0.min.css" />
+        		<script src="../../js.min.js">
         		</script>
 
         	</head>
@@ -83,8 +83,11 @@ def roosterverbouwing():
         					%s
         				</h5>
         			</div>
-        			<div data-role="content" id="rooster">""" %(leerlingVoornaam,leerlingVoornaam)
+        			<div data-role="content" id="rooster">
+        			<div id="pauze" style="visibility:hidden;">%s</div> """ %(leerlingVoornaam,leerlingVoornaam,leerlingKlas[0])
         eindHTML= u"""
+        </div>
+        </div>
         </body>
         </html>"""
 
@@ -92,7 +95,7 @@ def roosterverbouwing():
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
         NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaamNormalised+leerlingAchternaamNormalised),"w")
-        NieuwBestand.write((beginHTML + u'\n<table width="100%">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
+        NieuwBestand.write((beginHTML + u'\n<table style="width:100%;">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
         NieuwBestand.close()
         leerlingenlijst.append((leerlingKlas,leerlingVoornaam,leerlingAchternaam))
         llnr += 1
