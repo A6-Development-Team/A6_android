@@ -44,9 +44,11 @@ function VakLokaal(u){
         case 10:
             u = "P3"; v = "Pauze"; break;
         default:
-            if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
-            if (u > 6) {u -= 2}
-            if (u > 9) {u -= 3}
+        	if (u > 9) {u -= 3}
+        	else if (u > 6) {u -= 2}
+            else if (u > 3) {u -= 1} //hu bijstellen voor uren na de pauzes
+            
+            
           	var roosterinhoud = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + u);
           	if (roosterinhoud != null){
             v = roosterinhoud.innerHTML;}
@@ -64,7 +66,7 @@ function VakReplace(str) {
     var vakken = {
         "wisA":"Wiskunde A",    "wisB":"Wiskunde B",    "wisC":"Wiskunde C",    "wisD":"Wiskunde D",    "nat":"Natuurkunde",    "schk":"Scheikunde",
         "biol":"Biologie",      "in":"Informatica",     "lit":"Literatuur",     "ak":"Aardrijkskunde",  "ges":"Geschiedenis",   "maw":"Maatschappijwetenschappen",
-        "maat":"Maatschappijleer","mu":"Muziek",        "econ":"Economie",      "fi":"Filosofie",       "m&o":"M&O",            "nezl":"Nederlands",
+        "maat":"Maatschappijleer","mu":"Muziek",        "econ":"Economie",      "fi":"Filosofie",       "m&amp;o":"M&O",        "nezl":"Nederlands",
         "netl":"Nederlands",    "enzl":"Engels",        "entl":"Engels",        "duzl":"Duits",         "dutl":"Duits",         "fazl":"Frans",
         "fatl":"Frans",         "grtl":"Grieks",        "latl":"Latijn",        "lo":"LO",              "ckv":"CKV",            "kcv":"KCV",
         "anw":"ANW",            "bevo":"Bevo",          "te":"Tekenen",         "bsm":"BSM",            "tdd":"Teamdagdeel",    "mt":"Mentorles"};
