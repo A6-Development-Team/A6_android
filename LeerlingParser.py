@@ -19,7 +19,7 @@ for leerling in leerlingenlijst:
 <a href="../../index.html" data-ajax="false" onclick="localStorage.leerling = 'rooster/%s/%s/%s.html #rooster';" data-transition="none">
 %s
 </a>
-</li>""" % (leerling[0][:2], leerling[0][2],''.join(x for x in unicodedata.normalize('NFKD', leerling[1]+leerling[2]) if x in (string.ascii_letters + "- ")),leerling[1])
+</li>""" % (leerling[0][:2], leerling[0][2],(''.join(x for x in unicodedata.normalize('NFKD', leerling[1]+leerling[2]) if x in (string.ascii_letters + "- "))).replace(" ","%20"),leerling[1])
     leerlingenhtml.append((leerling[0],htmlstring,leerling[1].encode("utf8")))
 
 leerlingenhtml = sorted(leerlingenhtml, key=lambda k: k[1])
