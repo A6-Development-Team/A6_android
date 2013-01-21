@@ -22,7 +22,19 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="rw.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rw.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="84" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.6691617">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -44,8 +56,9 @@
         <option value="$PROJECT_DIR$/tijden.html" />
         <option value="$PROJECT_DIR$/over.html" />
         <option value="$PROJECT_DIR$/css/Cards.css" />
-        <option value="$PROJECT_DIR$/css/Cards.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/Cards.min.css" />
+        <option value="$PROJECT_DIR$/js/TTVL.olddebug.js" />
         <option value="$PROJECT_DIR$/rw.html" />
       </list>
     </option>
@@ -124,10 +137,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.laptop.html">
     <configuration default="false" name="laptop.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
@@ -189,7 +202,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.1006993" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12844037" sideWeight="0.9735744" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12844037" sideWeight="0.9735744" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.49752998" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.09090909" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.49752998" order="7" side_tool="true" content_ui="tabs" />
@@ -261,42 +274,19 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rooster/A5/A/GerkHijlkema.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="44" selection-start="819" selection-end="819" vertical-scroll-proportion="0.44356954">
-          <folding>
-            <element signature="n#style#0;n#td#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/credits.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="386" selection-end="386" vertical-scroll-proportion="0.23652695">
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="11" column="6" selection-start="386" selection-end="386" vertical-scroll-proportion="0.23652695" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laptop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5129771">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="25" column="29" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5129771" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/privacy.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542">
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roosters.html">
@@ -315,20 +305,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103">
-          <folding />
-        </state>
+        <state line="10" column="7" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tijden.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="8" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/countdown.min.js">
@@ -340,11 +322,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/TTVL.js">
@@ -356,13 +334,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/over.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542">
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/Cards.css">
@@ -374,25 +346,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2386" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.0">
+        <state line="0" column="2418" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="258" selection-end="258" vertical-scroll-proportion="0.13129771">
+        <state line="10" column="44" selection-start="424" selection-end="424" vertical-scroll-proportion="-0.06412214">
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/TTVL.olddebug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="38" selection-start="65" selection-end="65" vertical-scroll-proportion="0.024495678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rw.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="462" selection-end="462" vertical-scroll-proportion="0.27994013">
+        <state line="34" column="84" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.6691617">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
