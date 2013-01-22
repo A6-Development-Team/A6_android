@@ -13,9 +13,8 @@
 	<script src="js/TTVL.js"></script>
     <script type="text/javascript">
         var tijdNu = new Date();
-
         function TTVLrepeater(){
-            if (tijdNu.getHours()+tijdNu.getMinutes < 990){
+            if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
                 var t = document.getElementById("TTVLt").innerHTML.replace("Over <b>","").replace("</b> minuten","");
                 if(t>0 && (t%10 != 5)){
                     t -= 1;
