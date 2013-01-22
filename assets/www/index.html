@@ -11,13 +11,27 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/TTVL.js"></script>
-	<script type="text/javascript">
-    document.addEventListener("resume", TijdVolgendeUur, true);
-	document.addEventListener("deviceready", initPushwoosh, true);
-	$(window).bind('pageshow', function() { init(); }); 
-	
-	function init() { $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
-	</script>
+    <script type="text/javascript">
+        var tijdNu = new Date();
+
+        function TTVLrepeater(){
+            if (tijdNu.getHours()+tijdNu.getMinutes < 990){
+                var t = document.getElementById("TTVLt").innerHTML.replace("Over <b>","").replace("</b> minuten","");
+                if(t>0 && (t%10 != 5)){
+                    t -= 1;
+                    document.getElementById("TTVLt").innerHTML = "Over <b>" + t + "</b> minuten";
+                } else {
+                    TijdVolgendeUur();
+                }
+            }
+        }
+        setInterval(TTVLrepeater,60000);
+        document.addEventListener("resume", TijdVolgendeUur, true);
+        document.addEventListener("deviceready", initPushwoosh, true);
+        $(window).bind('pageshow', function() { init(); });
+
+        function init() { $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
+    </script>
 </head>
 	
 <body onload="init();"> 

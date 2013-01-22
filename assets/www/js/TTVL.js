@@ -1,5 +1,3 @@
-var tijdNu = new Date();
-
 function TijdVolgendeUur() {
     n = document.getElementById("pauze").innerHTML;
     tijdNu = new Date();
