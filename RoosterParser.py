@@ -25,8 +25,8 @@ def roosterverbouwing():
         leerlingKlas = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[1].lstrip().split("\n")[0].strip()[1:]
         leerlingAchternaam = beginRooster.split('<TD BGCOLOR="DCDCDC" NOWRAP style="border: none; font-family: Arial; font-size: 20px; font-weight: bold; padding: 5px;">')[2].lstrip().split("\n")[0].strip()
         leerlingVoornaam = nuttigGedeelteRooster.split("</TD>")[0].lstrip().rstrip()
-        leerlingVoornaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingVoornaam) if x in (string.ascii_letters + "- ")) #Don't ask.
-        leerlingAchternaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingAchternaam) if x in (string.ascii_letters + "- "))
+        leerlingVoornaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingVoornaam) if x in (string.ascii_letters + "-")) #Don't ask.
+        leerlingAchternaamNormalised = ''.join(x for x in unicodedata.normalize('NFKD', leerlingAchternaam) if x in (string.ascii_letters + "-"))
         print "%d: %s %s, %s" % (llnr+1, leerlingVoornaam, leerlingAchternaam, leerlingKlas)
 
         roosterTabel = nuttigGedeelteRooster.split("<table>")[1]
