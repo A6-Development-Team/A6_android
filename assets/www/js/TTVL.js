@@ -11,9 +11,8 @@ function TijdVolgendeUur() {
 
         WriteHTML(hu, hl, hv, vu, vl, vv, t + " min"); //code inspection, y u so Stasi
     } else if (n != undefined) { //undefined of andere falsy waarden afvangen
-        var element = document.getElementById("comingupcard");
-        element.parentNode.removeChild(element);
-
+        //var element = document.getElementById("comingupcard"); Dit gaan we dus even niet doen, we moeten proberen gezeik te voorkomen.
+        //element.parentNode.removeChild(element);
     }
     /*Voor nu rammen we dat rooster wel even in een card, geen tijd of zin om uit te zoeken hoe we dat even netjes wegwerken. document.getElementsByTagName("table")[0].style.visibility = "hidden";*/
 }
