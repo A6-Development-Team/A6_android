@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="9" />
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
@@ -22,19 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="rw.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rw.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="84" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.6691617">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -44,22 +33,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/TTVL.js" />
-        <option value="$PROJECT_DIR$/js/pushonoff.js" />
-        <option value="$PROJECT_DIR$/js/PushNotification.js" />
         <option value="$PROJECT_DIR$/credits.html" />
-        <option value="$PROJECT_DIR$/laptop.html" />
-        <option value="$PROJECT_DIR$/privacy.html" />
-        <option value="$PROJECT_DIR$/roosters.html" />
         <option value="$PROJECT_DIR$/samenvattingen.html" />
-        <option value="$PROJECT_DIR$/setup.html" />
-        <option value="$PROJECT_DIR$/tijden.html" />
-        <option value="$PROJECT_DIR$/over.html" />
         <option value="$PROJECT_DIR$/css/Cards.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/Cards.min.css" />
         <option value="$PROJECT_DIR$/js/TTVL.olddebug.js" />
         <option value="$PROJECT_DIR$/rw.html" />
+        <option value="$PROJECT_DIR$/over.html" />
+        <option value="$PROJECT_DIR$/tijden.html" />
+        <option value="$PROJECT_DIR$/roosterwijzigingen.html" />
+        <option value="$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css" />
+        <option value="$PROJECT_DIR$/laptop.html" />
+        <option value="$PROJECT_DIR$/privacy.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/roosters.html" />
+        <option value="$PROJECT_DIR$/setup.html" />
+        <option value="$PROJECT_DIR$/js/TTVL.js" />
       </list>
     </option>
   </component>
@@ -76,10 +65,13 @@
           <State>
             <id />
           </State>
+          <State>
+            <id>Spelling</id>
+          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>CoffeeScript</id>
+            <id>SpellCheckingInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -139,14 +131,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.laptop.html">
     <configuration default="false" name="laptop.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" value="file://$PROJECT_DIR$/laptop.html" />
+        <option name="engineId" value="chrome" />
+        <option name="fileUrl" value="file://$PROJECT_DIR$/index.html" />
       </JSDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -201,9 +194,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.1006993" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12844037" sideWeight="0.9735744" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.49752998" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21806633" sideWeight="0.32684284" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21806633" sideWeight="0.6634214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.49752998" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.09090909" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.49752998" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -211,10 +204,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.53069866" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.53069866" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -274,74 +267,9 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/credits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="386" selection-end="386" vertical-scroll-proportion="0.23652695" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laptop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="29" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.5129771" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/privacy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roosters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="21" selection-start="14602" selection-end="14602" vertical-scroll-proportion="-47.73077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samenvattingen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.67480916">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tijden.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="364" selection-end="364" vertical-scroll-proportion="0.25449103" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/countdown.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/TTVL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="126" selection-start="600" selection-end="658" vertical-scroll-proportion="0.2760646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/over.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="379" selection-end="379" vertical-scroll-proportion="0.259542" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/Cards.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="0" selection-end="3931" vertical-scroll-proportion="0.4493392">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
@@ -351,28 +279,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="424" selection-end="424" vertical-scroll-proportion="-0.06412214">
+        <state line="3972" column="1" selection-start="88477" selection-end="88477" vertical-scroll-proportion="0.67547727">
           <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#66204#66291#2" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/TTVL.olddebug.js">
+    <entry file="file://$PROJECT_DIR$/laptop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="65" selection-end="65" vertical-scroll-proportion="0.024495678">
+        <state line="29" column="57" selection-start="4014" selection-end="4014" vertical-scroll-proportion="0.7526718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="291" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.519084" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/over.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="818" selection-end="818" vertical-scroll-proportion="0.37709925" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tijden.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="112" selection-start="617" selection-end="617" vertical-scroll-proportion="0.5933014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roosterwijzigingen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="79" selection-start="542" selection-end="542" vertical-scroll-proportion="0.354067" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="19" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.8181818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roosters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="7" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.1751497" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="34" selection-start="3039" selection-end="3039" vertical-scroll-proportion="1.221374">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rw.html">
+    <entry file="file://$PROJECT_DIR$/js/TTVL.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="84" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.6691617">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="11" column="51" selection-start="497" selection-end="497" vertical-scroll-proportion="0.27459618">
+          <folding />
         </state>
       </provider>
     </entry>

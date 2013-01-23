@@ -9,7 +9,7 @@ function TijdVolgendeUur() {
         var vv = VakLokaal(u + 1), vu = vv[0], vl = vv[2];
         vv = vv[1];
 
-        WriteHTML(hu, hl, hv, vu, vl, vv, "Over <b>" + t + "</b> minuten"); //code inspection, y u so Stasi
+        WriteHTML(hu, hl, hv, vu, vl, vv, t + " min"); //code inspection, y u so Stasi
     } else if (n != undefined) { //undefined of andere falsy waarden afvangen
         var element = document.getElementById("comingupcard");
         element.parentNode.removeChild(element);
@@ -80,7 +80,7 @@ function VakReplace(str) {
         "maat":"Maatschappijleer", "mu":"Muziek", "econ":"Economie", "fi":"Filosofie", "m&amp;o":"M&amp;O", "nezl":"Nederlands",
         "netl":"Nederlands", "enzl":"Engels", "entl":"Engels", "duzl":"Duits", "dutl":"Duits", "fazl":"Frans",
         "fatl":"Frans", "grtl":"Grieks", "latl":"Latijn", "lo":"LO", "ckv":"CKV", "kcv":"KCV",
-        "anw":"ANW", "bevo":"Bevo", "te":"Tekenen", "bsm":"BSM", "tdd":"Teamdagdeel", "mt":"Mentorles"};
+        "anw":"ANW", "bevo":"Bevo", "te":"Tekenen", "bsm":"BSM", "tdd":"Teamdagdeel", "mt":"Mentorles", "MTU":"Mentorles"};
     for (var i in vakken) {
         if (str == i) {
             str = str.replace(i, vakken[i]);

@@ -3969,21 +3969,12 @@ span.ui-slider-label-b {
 }
 
 .ui-icon-laptop {
-    background-image: url("img/laptop.png")
-}
-
-.ui-icon-boek {
-    background-image: url("img/boek.png")
+    background-image: url("images/laptop.png")
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
     .ui-icon-laptop {
-        background-image: url("img/laptop@2x.png");
-        background-size: 18px 18px
-    }
-
-    .ui-icon-boek {
-        background-image: url("img/boek@2x.png");
+        background-image: url("images/laptop@2x.png");
         background-size: 18px 18px
     }
 }
