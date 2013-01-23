@@ -1,33 +1,204 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>A6</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
-	<script src="js/cordova-2.3.0.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"/>
+    <script src="js/cordova-2.3.0.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
 </head>
 <body>
 <!-- Start of first page -->
-<div data-role="page" id="rooster" >
-	<div data-role="header" data-position="fixed">
-		<a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
-			<div data-role="popup" id="menu">
-						<ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
-							<li data-icon="home"><a href="index.html" data-ajax="false" data-transition="none">Vandaag</a></li>
-							<li data-icon="refresh"><a href="roosterwijzigingen.html" data-transition="none">Wijzigingen</a></li>
-							<li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptops</a></li>
-							<li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
-						</ul>
-			</div>     
-	<h1>Roosters</h1>
-		<a href="tijden.html" data-rel="dialog" data-role="button" data-transition="none">Tijden</a>
-	</div><!-- /header -->
-	<div data-role="content">
-        <div data-role="collapsible-set" data-theme="c" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d"><div data-role="collapsible" data-inset="true"><h2>A6A</h2><ul data-role="listview"><li data-theme="c"><a href="rooster/A6/A/AlrikWagenaar.html" data-transition="none"> Alrik </a></li><li data-theme="c"><a href="rooster/A6/A/AnnemarieMaan.html" data-transition="none"> Annemarie </a></li><li data-theme="c"><a href="rooster/A6/A/BrechtEnde%20van%20der.html" data-transition="none"> Brecht </a></li><li data-theme="c"><a href="rooster/A6/A/DurkMeer%20van%20der.html" data-transition="none"> Durk </a></li><li data-theme="c"><a href="rooster/A6/A/DwayneVelde%20van%20der.html" data-transition="none"> Dwayne </a></li><li data-theme="c"><a href="rooster/A6/A/HannahBoer%20de.html" data-transition="none"> Hannah </a></li><li data-theme="c"><a href="rooster/A6/A/IrisHaan%20de.html" data-transition="none"> Iris </a></li><li data-theme="c"><a href="rooster/A6/A/JelgerKan.html" data-transition="none"> Jelger </a></li><li data-theme="c"><a href="rooster/A6/A/JoostAken%20van.html" data-transition="none"> Joost </a></li><li data-theme="c"><a href="rooster/A6/A/JornBoer%20de.html" data-transition="none"> Jorn </a></li><li data-theme="c"><a href="rooster/A6/A/KarinaKrist.html" data-transition="none"> Karina </a></li><li data-theme="c"><a href="rooster/A6/A/MaaikeDijkstra.html" data-transition="none"> Maaike </a></li><li data-theme="c"><a href="rooster/A6/A/MaartenRuiter.html" data-transition="none"> Maarten </a></li><li data-theme="c"><a href="rooster/A6/A/MariskaVries%20de.html" data-transition="none"> Mariska </a></li><li data-theme="c"><a href="rooster/A6/A/MarjetBoer%20de.html" data-transition="none"> Marjet </a></li><li data-theme="c"><a href="rooster/A6/A/MartineLuchtenveld.html" data-transition="none"> Martine </a></li><li data-theme="c"><a href="rooster/A6/A/MileenCuypers.html" data-transition="none"> Mileen </a></li><li data-theme="c"><a href="rooster/A6/A/NielsVries%20de.html" data-transition="none"> Niels </a></li><li data-theme="c"><a href="rooster/A6/A/ReinderStaphorst.html" data-transition="none"> Reinder </a></li><li data-theme="c"><a href="rooster/A6/A/SietskeHelfferich.html" data-transition="none"> Sietske </a></li><li data-theme="c"><a href="rooster/A6/A/WanderLamot.html" data-transition="none"> Wander </a></li><li data-theme="c"><a href="rooster/A6/A/WesselWagt%20de.html" data-transition="none"> Wessel </a></li></ul></div><div data-role="collapsible" data-inset="true"><h2>A6B</h2><ul data-role="listview"><li data-theme="c"><a href="rooster/A6/B/AmberKlompmaker.html" data-transition="none"> Amber </a></li><li data-theme="c"><a href="rooster/A6/B/AnneKingma.html" data-transition="none"> Anne </a></li><li data-theme="c"><a href="rooster/A6/B/DaanHarten%20van.html" data-transition="none"> Daan </a></li><li data-theme="c"><a href="rooster/A6/B/EmmaPeetsma.html" data-transition="none"> Emma </a></li><li data-theme="c"><a href="rooster/A6/B/EvelienGeerlig.html" data-transition="none"> Evelien </a></li><li data-theme="c"><a href="rooster/A6/B/FemkeYska.html" data-transition="none"> Femke </a></li><li data-theme="c"><a href="rooster/A6/B/HiddeWedman.html" data-transition="none"> Hidde </a></li><li data-theme="c"><a href="rooster/A6/B/JannekePost.html" data-transition="none"> Janneke </a></li><li data-theme="c"><a href="rooster/A6/B/JelleKalsbeek.html" data-transition="none"> Jelle </a></li><li data-theme="c"><a href="rooster/A6/B/JeroenJonker.html" data-transition="none"> Jeroen </a></li><li data-theme="c"><a href="rooster/A6/B/JetKolhoff.html" data-transition="none"> Jet </a></li><li data-theme="c"><a href="rooster/A6/B/JohanBetten.html" data-transition="none"> Johan </a></li><li data-theme="c"><a href="rooster/A6/B/LeonMelein.html" data-transition="none"> Léon </a></li><li data-theme="c"><a href="rooster/A6/B/MaxLamberts.html" data-transition="none"> Max </a></li><li data-theme="c"><a href="rooster/A6/B/NanouNaber.html" data-transition="none"> Nanou </a></li><li data-theme="c"><a href="rooster/A6/B/NynkeHielkema.html" data-transition="none"> Nynke </a></li><li data-theme="c"><a href="rooster/A6/B/RickHuisman.html" data-transition="none"> Rick </a></li><li data-theme="c"><a href="rooster/A6/B/SofieRooij%20van.html" data-transition="none"> Sofie </a></li><li data-theme="c"><a href="rooster/A6/B/TomJanssen.html" data-transition="none"> Tom </a></li><li data-theme="c"><a href="rooster/A6/B/WarnerHoekstra.html" data-transition="none"> Warner </a></li><li data-theme="c"><a href="rooster/A6/B/YumeiSanders.html" data-transition="none"> Yumei </a></li></ul></div><div data-role="collapsible" data-inset="true"><h2>A6C</h2><ul data-role="listview"><li data-theme="c"><a href="rooster/A6/C/AnneliesPelkwijk%20ter.html" data-transition="none"> Annelies </a></li><li data-theme="c"><a href="rooster/A6/C/AylaDommelen%20van.html" data-transition="none"> Ayla </a></li><li data-theme="c"><a href="rooster/A6/C/CorineRollema.html" data-transition="none"> Corine </a></li><li data-theme="c"><a href="rooster/A6/C/DannyGalen%20van.html" data-transition="none"> Danny </a></li><li data-theme="c"><a href="rooster/A6/C/ElineHaarsma.html" data-transition="none"> Eline </a></li><li data-theme="c"><a href="rooster/A6/C/EmmaHoogenboezem.html" data-transition="none"> Emma </a></li><li data-theme="c"><a href="rooster/A6/C/EmmyMaats.html" data-transition="none"> Emmy </a></li><li data-theme="c"><a href="rooster/A6/C/HilleDalstra.html" data-transition="none"> Hille </a></li><li data-theme="c"><a href="rooster/A6/C/JesseSchippers.html" data-transition="none"> Jesse </a></li><li data-theme="c"><a href="rooster/A6/C/JudithVeldman.html" data-transition="none"> Judith </a></li><li data-theme="c"><a href="rooster/A6/C/KelwinKoets.html" data-transition="none"> Kelwin </a></li><li data-theme="c"><a href="rooster/A6/C/LeenkeJense.html" data-transition="none"> Leenke </a></li><li data-theme="c"><a href="rooster/A6/C/LisaHensen.html" data-transition="none"> Lisa </a></li><li data-theme="c"><a href="rooster/A6/C/LisanneBraams.html" data-transition="none"> Lisanne </a></li><li data-theme="c"><a href="rooster/A6/C/LisemeeSmid.html" data-transition="none"> Lisemée </a></li><li data-theme="c"><a href="rooster/A6/C/LizWesthof.html" data-transition="none"> Liz </a></li><li data-theme="c"><a href="rooster/A6/C/MyrtheZwan%20van%20der.html" data-transition="none"> Myrthe </a></li><li data-theme="c"><a href="rooster/A6/C/NoelleBakker.html" data-transition="none"> Noëlle </a></li><li data-theme="c"><a href="rooster/A6/C/RenateBijker.html" data-transition="none"> Renate </a></li><li data-theme="c"><a href="rooster/A6/C/SagyEphrati.html" data-transition="none"> Sagy </a></li><li data-theme="c"><a href="rooster/A6/C/SanneAkkerman.html" data-transition="none"> Sanne </a></li><li data-theme="c"><a href="rooster/A6/C/SjanneRekker.html" data-transition="none"> Sjanne </a></li><li data-theme="c"><a href="rooster/A6/C/StefKrul.html" data-transition="none"> Stef </a></li><li data-theme="c"><a href="rooster/A6/C/TimKoops.html" data-transition="none"> Tim </a></li><li data-theme="c"><a href="rooster/A6/C/TrangPhan.html" data-transition="none"> Trang </a></li><li data-theme="c"><a href="rooster/A6/C/ValentijnBouten.html" data-transition="none"> Valentijn </a></li><li data-theme="c"><a href="rooster/A6/C/WietseBouwmeester.html" data-transition="none"> Wietse </a></li><li data-theme="c"><a href="rooster/A6/C/WouterZomeren%20van.html" data-transition="none"> Wouter </a></li></ul></div><div data-role="collapsible" data-inset="true"><h2>A6D</h2><ul data-role="listview"><li data-theme="c"><a href="rooster/A6/D/AbdulfataahMohamed.html" data-transition="none"> Abdulfataah </a></li><li data-theme="c"><a href="rooster/A6/D/ArjenVaartjes.html" data-transition="none"> Arjen </a></li><li data-theme="c"><a href="rooster/A6/D/AstridGeest%20van%20der.html" data-transition="none"> Astrid </a></li><li data-theme="c"><a href="rooster/A6/D/BramBenthem.html" data-transition="none"> Bram </a></li><li data-theme="c"><a href="rooster/A6/D/DouwePollmann.html" data-transition="none"> Douwe </a></li><li data-theme="c"><a href="rooster/A6/D/EldertElzinga.html" data-transition="none"> Eldert </a></li><li data-theme="c"><a href="rooster/A6/D/ElliottTerpstra.html" data-transition="none"> Elliott </a></li><li data-theme="c"><a href="rooster/A6/D/EvaBosma.html" data-transition="none"> Eva </a></li><li data-theme="c"><a href="rooster/A6/D/FrancisloisBouwhuis.html" data-transition="none"> Francislois </a></li><li data-theme="c"><a href="rooster/A6/D/FreyaLiemburg.html" data-transition="none"> Freya </a></li><li data-theme="c"><a href="rooster/A6/D/FrisoHeikens.html" data-transition="none"> Friso </a></li><li data-theme="c"><a href="rooster/A6/D/GielMaan.html" data-transition="none"> Giel </a></li><li data-theme="c"><a href="rooster/A6/D/HenkWever.html" data-transition="none"> Henk </a></li><li data-theme="c"><a href="rooster/A6/D/JacobSikkes.html" data-transition="none"> Jacob </a></li><li data-theme="c"><a href="rooster/A6/D/JelmerBerg%20van%20den.html" data-transition="none"> Jelmer </a></li><li data-theme="c"><a href="rooster/A6/D/JolandaJong%20de.html" data-transition="none"> Jolanda </a></li><li data-theme="c"><a href="rooster/A6/D/JornertGlimmerveen.html" data-transition="none"> Jornert </a></li><li data-theme="c"><a href="rooster/A6/D/JorntLageveen.html" data-transition="none"> Jornt </a></li><li data-theme="c"><a href="rooster/A6/D/KlaasZandstra.html" data-transition="none"> Klaas </a></li><li data-theme="c"><a href="rooster/A6/D/MalouVelde%20van%20der.html" data-transition="none"> Malou </a></li><li data-theme="c"><a href="rooster/A6/D/MarcoKoopmans.html" data-transition="none"> Marco </a></li><li data-theme="c"><a href="rooster/A6/D/MarleneVijver.html" data-transition="none"> Marlene </a></li><li data-theme="c"><a href="rooster/A6/D/MennoMeer%20van%20der.html" data-transition="none"> Menno </a></li><li data-theme="c"><a href="rooster/A6/D/MikeWu.html" data-transition="none"> Mike </a></li><li data-theme="c"><a href="rooster/A6/D/MitchDijk%20van.html" data-transition="none"> Mitch </a></li><li data-theme="c"><a href="rooster/A6/D/NoamRubin.html" data-transition="none"> Noam </a></li><li data-theme="c"><a href="rooster/A6/D/ReneBrals.html" data-transition="none"> René</a></li><li data-theme="c"><a href="rooster/A6/D/Stephan%20LarsRoffel.html" data-transition="none"> Stephan Lars </a></li><li data-theme="c"><a href="rooster/A6/D/ThomasHaan%20de.html" data-transition="none"> Thomas </a></li><li data-theme="c"><a href="rooster/A6/D/WykeGrob.html" data-transition="none"> Wyke </a></li><li data-theme="c"><a href="rooster/A6/D/ZinaJorna.html" data-transition="none"> Zina </a></li></ul></div></div>
-	</div><!-- /content -->
-</div><!--godsamme je mist een /divje :P > NU NIET MEER MUAHAHAHA okee help ik word melig-->
+<div data-role="page" id="rooster">
+    <div data-role="header" data-position="fixed">
+        <a href="#menu" data-rel="popup" data-icon="grid" data-iconpos="left" data-transition="none">Menu</a>
+
+        <div data-role="popup" id="menu">
+            <ul data-role="listview" data-inset="true" style="min-width:275px;" data-theme="c">
+                <li data-icon="home"><a href="index.html" data-ajax="false" data-transition="none">Vandaag</a></li>
+                <li data-icon="refresh"><a href="roosterwijzigingen.html" data-transition="none">Wijzigingen</a></li>
+                <li data-icon="laptop"><a href="laptop.html" data-transition="none">Laptops</a></li>
+                <li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
+            </ul>
+        </div>
+        <h1>Roosters</h1>
+        <a href="tijden.html" data-rel="dialog" data-role="button" data-transition="none">Tijden</a>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+        <div data-role="collapsible-set" data-theme="c" data-content-theme="c" data-collapsed-icon="arrow-r"
+             data-expanded-icon="arrow-d">
+            <div data-role="collapsible" data-inset="true"><h2>A6A</h2>
+                <ul data-role="listview">
+                    <li data-theme="c"><a href="rooster/A6/A/AlrikWagenaar.html" data-transition="none"> Alrik </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/AnnemarieMaan.html" data-transition="none"> Annemarie </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/BrechtEndevander.html" data-transition="none">
+                        Brecht </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/DurkMeervander.html" data-transition="none">
+                        Durk </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/DwayneVeldevander.html" data-transition="none">
+                        Dwayne </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/HannahBoerde.html" data-transition="none"> Hannah </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/IrisHaande.html" data-transition="none"> Iris </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/JelgerKan.html" data-transition="none"> Jelger </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/JoostAkenvan.html" data-transition="none"> Joost </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/JornBoerde.html" data-transition="none"> Jorn </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/KarinaKrist.html" data-transition="none"> Karina </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/MaaikeDijkstra.html" data-transition="none"> Maaike </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/MaartenRuiter.html" data-transition="none"> Maarten </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/MariskaVriesde.html" data-transition="none">
+                        Mariska </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/MarjetBoerde.html" data-transition="none"> Marjet </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/MartineLuchtenveld.html" data-transition="none">
+                        Martine </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/MileenCuypers.html" data-transition="none"> Mileen </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/NielsVriesde.html" data-transition="none"> Niels </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/ReinderStaphorst.html" data-transition="none"> Reinder </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/A/SietskeHelfferich.html" data-transition="none">
+                        Sietske </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/WanderLamot.html" data-transition="none"> Wander </a></li>
+                    <li data-theme="c"><a href="rooster/A6/A/WesselWagtde.html" data-transition="none"> Wessel </a>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-inset="true"><h2>A6B</h2>
+                <ul data-role="listview">
+                    <li data-theme="c"><a href="rooster/A6/B/AmberKlompmaker.html" data-transition="none"> Amber </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/B/AnneKingma.html" data-transition="none"> Anne </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/DaanHartenvan.html" data-transition="none"> Daan </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/B/EmmaPeetsma.html" data-transition="none"> Emma </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/EvelienGeerlig.html" data-transition="none"> Evelien </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/B/FemkeYska.html" data-transition="none"> Femke </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/HiddeWedman.html" data-transition="none"> Hidde </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/JannekePost.html" data-transition="none"> Janneke </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/JelleKalsbeek.html" data-transition="none"> Jelle </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/JeroenJonker.html" data-transition="none"> Jeroen </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/JetKolhoff.html" data-transition="none"> Jet </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/JohanBetten.html" data-transition="none"> Johan </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/LeonMelein.html" data-transition="none"> Léon </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/MaxLamberts.html" data-transition="none"> Max </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/NanouNaber.html" data-transition="none"> Nanou </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/NynkeHielkema.html" data-transition="none"> Nynke </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/RickHuisman.html" data-transition="none"> Rick </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/SofieRooijvan.html" data-transition="none"> Sofie </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/B/TomJanssen.html" data-transition="none"> Tom </a></li>
+                    <li data-theme="c"><a href="rooster/A6/B/WarnerHoekstra.html" data-transition="none"> Warner </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/B/YumeiSanders.html" data-transition="none"> Yumei </a></li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-inset="true"><h2>A6C</h2>
+                <ul data-role="listview">
+                    <li data-theme="c"><a href="rooster/A6/C/AnneliesPelkwijkter.html" data-transition="none">
+                        Annelies </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/AylaDommelenvan.html" data-transition="none"> Ayla </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/CorineRollema.html" data-transition="none"> Corine </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/DannyGalenvan.html" data-transition="none"> Danny </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/ElineHaarsma.html" data-transition="none"> Eline </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/EmmaHoogenboezem.html" data-transition="none"> Emma </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/EmmyMaats.html" data-transition="none"> Emmy </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/HilleDalstra.html" data-transition="none"> Hille </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/JesseSchippers.html" data-transition="none"> Jesse </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/JudithVeldman.html" data-transition="none"> Judith </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/KelwinKoets.html" data-transition="none"> Kelwin </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/LeenkeJense.html" data-transition="none"> Leenke </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/LisaHensen.html" data-transition="none"> Lisa </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/LisanneBraams.html" data-transition="none"> Lisanne </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/LisemeeSmid.html" data-transition="none"> Lisemée </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/LizWesthof.html" data-transition="none"> Liz </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/MyrtheZwanvander.html" data-transition="none">
+                        Myrthe </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/NoelleBakker.html" data-transition="none"> Noëlle </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/RenateBijker.html" data-transition="none"> Renate </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/SagyEphrati.html" data-transition="none"> Sagy </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/SanneAkkerman.html" data-transition="none"> Sanne </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/SjanneRekker.html" data-transition="none"> Sjanne </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/StefKrul.html" data-transition="none"> Stef </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/TimKoops.html" data-transition="none"> Tim </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/TrangPhan.html" data-transition="none"> Trang </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/ValentijnBouten.html" data-transition="none">
+                        Valentijn </a></li>
+                    <li data-theme="c"><a href="rooster/A6/C/WietseBouwmeester.html" data-transition="none"> Wietse </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/C/WouterZomerenvan.html" data-transition="none">
+                        Wouter </a></li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-inset="true"><h2>A6D</h2>
+                <ul data-role="listview">
+                    <li data-theme="c"><a href="rooster/A6/D/AbdulfataahMohamed.html" data-transition="none">
+                        Abdulfataah </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/ArjenVaartjes.html" data-transition="none"> Arjen </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/AstridGeestvander.html" data-transition="none">
+                        Astrid </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/BramBenthem.html" data-transition="none"> Bram </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/DouwePollmann.html" data-transition="none"> Douwe </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/EldertElzinga.html" data-transition="none"> Eldert </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/ElliottTerpstra.html" data-transition="none"> Elliott </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/EvaBosma.html" data-transition="none"> Eva </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/FrancisloisBouwhuis.html" data-transition="none">
+                        Francislois </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/FreyaLiemburg.html" data-transition="none"> Freya </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/FrisoHeikens.html" data-transition="none"> Friso </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/GielMaan.html" data-transition="none"> Giel </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/HenkWever.html" data-transition="none"> Henk </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/JacobSikkes.html" data-transition="none"> Jacob </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/JelmerBergvanden.html" data-transition="none">
+                        Jelmer </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/JolandaJongde.html" data-transition="none"> Jolanda </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/JornertGlimmerveen.html" data-transition="none">
+                        Jornert </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/JorntLageveen.html" data-transition="none"> Jornt </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/KlaasZandstra.html" data-transition="none"> Klaas </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/MalouVeldevander.html" data-transition="none">
+                        Malou </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/MarcoKoopmans.html" data-transition="none"> Marco </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/MarleneVijver.html" data-transition="none"> Marlene </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/MennoMeervander.html" data-transition="none">
+                        Menno </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/MikeWu.html" data-transition="none"> Mike </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/MitchDijkvan.html" data-transition="none"> Mitch </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/NoamRubin.html" data-transition="none"> Noam </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/ReneBrals.html" data-transition="none"> René</a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/StephanLarsRoffel.html" data-transition="none"> Stephan
+                        Lars </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/ThomasHaande.html" data-transition="none"> Thomas </a>
+                    </li>
+                    <li data-theme="c"><a href="rooster/A6/D/WykeGrob.html" data-transition="none"> Wyke </a></li>
+                    <li data-theme="c"><a href="rooster/A6/D/ZinaJorna.html" data-transition="none"> Zina </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /content -->
+</div>
+<!--godsamme je mist een /divje :P > NU NIET MEER MUAHAHAHA okee help ik word melig-->
 </body>
 </html>
