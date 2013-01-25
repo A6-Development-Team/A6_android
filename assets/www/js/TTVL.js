@@ -1,6 +1,13 @@
 function TijdVolgendeUur() {
     n = document.getElementById("pauze").innerHTML;
     tijdNu = new Date();
+	
+	if (n == "n") {
+		var element = document.getElementById("comingupcard");
+		element.parentNode.removeChild(element);
+	}
+	
+	else {
 
     var tv = TijdVerschil(), t = tv[0], u = tv[1]; //beetje uitgedund: we willen functies zo weinig mogelijk aanroepen
     if (tijdNu.getDay() != 0 && tijdNu.getDay() != 6 && t > 0) {
@@ -11,10 +18,9 @@ function TijdVolgendeUur() {
 
         WriteHTML(hu, hl, hv, vu, vl, vv, t + " min"); //code inspection, y u so Stasi
     } else if (n != undefined) { //undefined of andere falsy waarden afvangen
-        //var element = document.getElementById("comingupcard"); Dit gaan we dus even niet doen, we moeten proberen gezeik te voorkomen.
-        //element.parentNode.removeChild(element);
+        WriteHTML();
     }
-    /*Voor nu rammen we dat rooster wel even in een card, geen tijd of zin om uit te zoeken hoe we dat even netjes wegwerken. document.getElementsByTagName("table")[0].style.visibility = "hidden";*/
+	}
 }
 
 function TijdVerschil() {
@@ -75,7 +81,7 @@ function VakLokaal(u) {
 function VakReplace(str) {
     var vakken = {
         "wisA":"Wiskunde A", "wisB":"Wiskunde B", "wisC":"Wiskunde C", "wisD":"Wiskunde D", "nat":"Natuurkunde", "schk":"Scheikunde",
-        "biol":"Biologie", "in":"Informatica", "lit":"Literatuur", "ak":"Aardrijkskunde", "ges":"Geschiedenis", "maw":"Maatschappijwetenschappen",
+        "biol":"Biologie", "in":"Informatica", "lit":"Literatuur", "ak":"Aardrijkskunde", "ges":"Geschiedenis", "maw":"Maatschappijwet.",
         "maat":"Maatschappijleer", "mu":"Muziek", "econ":"Economie", "fi":"Filosofie", "m&amp;o":"M&amp;O", "nezl":"Nederlands",
         "netl":"Nederlands", "enzl":"Engels", "entl":"Engels", "duzl":"Duits", "dutl":"Duits", "fazl":"Frans",
         "fatl":"Frans", "grtl":"Grieks", "latl":"Latijn", "lo":"LO", "ckv":"CKV", "kcv":"KCV",

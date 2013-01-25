@@ -13,16 +13,17 @@
 	<script src="js/TTVL.js"></script>
     <script type="text/javascript">
         var tijdNu = new Date();
+			
         function TTVLrepeater(){
-            if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
-                var t = document.getElementById("TTVLt").innerHTML.replace("</b> min","");
-                if(t>0 && (t%10 != 5)){
-                    t -= 1;
-                    document.getElementById("TTVLt").innerHTML =  t + " min";
-                } else {
-                    TijdVolgendeUur();
-                }
-            }
+				if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
+					var t = document.getElementById("TTVLt").innerHTML.replace("</b> min","");
+					if(t>0 && (t%10 != 5)){
+						t -= 1;
+						document.getElementById("TTVLt").innerHTML =  t + " min";
+					} else {
+						TijdVolgendeUur();
+					}
+				}
         }
         var repeater = setInterval(TTVLrepeater,30000);
         document.addEventListener("resume", onresume, true);
@@ -46,9 +47,9 @@
 							<li data-icon="info"><a href="over.html" data-transition="none">Over</a></li>
 						</ul>
 	    </div>
-	</div><!-- /header -->
+	</div>
 	<div data-role="content">
-    <!--Lasciate ogne speranza, voi ch'intrate--><!--KOMT 'IE!--><!--Hier plempen we dus de TTVL info-->
+    <!--TTVL-->
 	<div id="comingupcard" class="card">
 	<h2 class="titel">Nu en straks</h2>
 	<div class="ui-grid-b">
@@ -70,13 +71,13 @@
 		<!--/Volgende uur-->
 	</div><!--/grid-->
     </div><!--/card-->
-   <!--Schedule // Omdat ik geen zin heb om dit helemaal netjes ergens weg te werken, heeft het rooster eerst maar even zijn eigen card.-->
+   <!--Schedule-->
     <div id="schedulecard" class="card">
         <h2 id="titel" class="titel">Rooster</h2>
         <div class="contents" id="rooster" style="margin-left:20px; margin-right:20px;"><a href="setup.html" data-role="button">Stel rooster in</a></div>
     </div>
    <!--/Schedule-->
-   <!--HELPFUL // Dit zou dus helpful moeten zijn. Geen idee of dat het ook is, maar het is vulling.-->
+   <!--Helpful-->
     <div id="helpfulcard" class="card">
         <h2 id="helpfultitel" class="titel">Handige info</h2>
         <div data-role="controlgroup" id="helpfullist" class="contents">
@@ -84,8 +85,8 @@
             <a href="#" data-role="button" onclick="window.open('https://files.itslearning.com/data/423/3904/P3docenten/index.html', '_blank')" data-transition="none">Lerarenrooster</a>
         </div>
     </div>
-    <!--/HELPFUL-->
-	</div><!-- /content -->
-</div><!-- /page -->
+    <!--/Helpful-->
+	</div>
+</div>
 </body>
 </html>
