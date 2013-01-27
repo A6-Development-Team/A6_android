@@ -103,6 +103,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -123,7 +124,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,18 +274,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2418" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="2418" selection-start="2418" selection-end="2418" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3972" column="1" selection-start="88477" selection-end="88477" vertical-scroll-proportion="0.67547727">
-          <folding>
-            <element signature="e#66204#66291#2" expanded="true" />
-          </folding>
-        </state>
+        <state line="3972" column="1" selection-start="88477" selection-end="88477" vertical-scroll-proportion="0.67547727" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laptop.html">
@@ -323,18 +317,14 @@
         <state line="32" column="7" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.1751497" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="34" selection-start="3039" selection-end="3039" vertical-scroll-proportion="1.221374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/TTVL.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="497" selection-end="497" vertical-scroll-proportion="0.27459618">
-          <folding />
-        </state>
+        <state line="11" column="51" selection-start="497" selection-end="497" vertical-scroll-proportion="0.27459618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="27" selection-start="2810" selection-end="2810" vertical-scroll-proportion="1.712977" />
       </provider>
     </entry>
   </component>
