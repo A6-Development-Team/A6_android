@@ -14,7 +14,7 @@ def leerlingverbouwing():
 
         if beginRooster[:1] == """<!DOCTYPE html""":
             print "Done: 404 reached"
-        break
+            break
 
 
         #Slecht geformatteerd rooster inladen
@@ -48,7 +48,7 @@ def leerlingverbouwing():
                 roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
             roosterUren[i] = "".join(roosterDagen)
 
-        roosterTabel = "".join(roosterUren)
+        roosterTabel = "".join(roosterTabel.split("<tr>")[:2] + roosterUren)
         beginHTML = u"""<!DOCTYPE html>
         <html>
             <head>
@@ -81,7 +81,7 @@ def leerlingverbouwing():
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
         NieuwBestand = open("%s%s.html" % (mapNaam, leerlingVoornaamNormalised+leerlingAchternaamNormalised),"w")
-        NieuwBestand.write((beginHTML + u'\n<table style="width:100%;">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
+        NieuwBestand.write((beginHTML + u'\n<table style="width:100%;"><tr>' + roosterTabel + u"\n" + eindHTML).encode('utf8'))
         NieuwBestand.close()
         leerlingenlijst.append((leerlingKlas,leerlingVoornaam,leerlingAchternaam))
         llnr += 1
@@ -219,7 +219,7 @@ def leraarverbouwing():
                 roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
             roosterUren[i] = "".join(roosterDagen)
 
-        RoosterTabel = "".join(roosterUren)
+        RoosterTabel = "".join(roosterTabel.split("<tr>")[:2] + roosterUren)
         beginHTML = u"""<!DOCTYPE html>
         <html>
             <head>
@@ -252,7 +252,7 @@ def leraarverbouwing():
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
         NieuwBestand = open(mapNaam + "%s.html" % (leraarVoornaamNormalised),"w")
-        NieuwBestand.write((beginHTML + u'\n<table style="width:100%;">' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
+        NieuwBestand.write((beginHTML + u'\n<table style="width:100%;"><tr>' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
         NieuwBestand.close()
         lerarenlijst.append((leraarVoornaam))
         llnr += 1
@@ -318,7 +318,7 @@ def onderverbouwing():
 
         ##TTVL Toewijzing
         ##We gaan even sophisticated die lettertjes toewijzen.
-        i = onderbouwKlas[:1] ##Stap 1: We pakken de klas, nemen de eerste letter (Trouwens, Clusterfuck alert: Altijd als ik het eerste element wil, moet ik het nulde nemen. Bij een string moet ik dan wél 1 doen ipv 0. ARGH.)
+        i = onderbouwKlas[:1] ##Stap 1: We pakken de klas, nemen de eerste letter (Trouwens, Clusterfuck alert: Altijd als ik het eerste element wil, moet ik het nulde nemen. Bij een string moet ik dan wel 1 doen ipv 0. ARGH.)
         if i == "A":          ##Stap 2: Met een standaard if/elif/else-structuurtje vergelijken we de eerste letter van 't rooster met een A, G of H. A en G krijgen "A", H krijgt "H".
             onderbouwNiveau = "A"
         elif i == "G":
