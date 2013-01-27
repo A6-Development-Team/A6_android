@@ -1,13 +1,13 @@
+var n, tijdNu = new Date();
 function TijdVolgendeUur() {
     n = document.getElementById("pauze").innerHTML;
     tijdNu = new Date();
 	
 	if (n == "n") {
-		var element = document.getElementById("comingupcard");
-		element.parentNode.removeChild(element);
-	}
-	
-	else {
+        n = LeraarPauze();
+	} else if (n == "H" || n == "A") {
+        n += n;
+    }
 
     var tv = TijdVerschil(), t = tv[0], u = tv[1]; //beetje uitgedund: we willen functies zo weinig mogelijk aanroepen
     if (tijdNu.getDay() != 0 && tijdNu.getDay() != 6 && t > 0) {
@@ -20,7 +20,31 @@ function TijdVolgendeUur() {
     } else if (n != undefined) { //undefined of andere falsy waarden afvangen
         WriteHTML();
     }
-	}
+
+}
+
+function LeraarPauze() {
+    var p1 = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + 3).innerHTML, pauze1;
+    if (p1 == "&nbsp;") {
+        pauze1 = "A"
+    } //Yolo
+    else if (p1.split("</br>")[0][1] == "H") {
+        pauze1 = "H"
+    }
+    else {
+        pauze1 = "A"
+    }
+    var p2 = document.getElementById("TTVLd" + tijdNu.getDay() + "u" + 6).innerHTML, pauze2;
+    if (p2 == "&nbsp;") {
+        pauze2 = "A"
+    } //Yolo
+    else if (p2.split("</br>")[0][1] == "H") {
+        pauze2 = "H"
+    }
+    else {
+        pauze2 = "A"
+    }
+    return pauze1.concat(pauze2 + "L"); //Die L zorgt ervoor dat mijn return een length heeft van 3, wat ik later kan gebruiken om terug te halen dat het om een leraar gaat
 }
 
 function TijdVerschil() {
@@ -28,10 +52,10 @@ function TijdVerschil() {
     lesUren[0] = {uur:8, minuut:10}; //1e uur
     lesUren[1] = {uur:9, minuut:0}; //2e uur
     lesUren[2] = {uur:9, minuut:50}; //HAVO: pauze 1, VWO: 3e uur
-    lesUren[3] = (n == "H") ? {uur:10, minuut:5} : {uur:10, minuut:40};
+    lesUren[3] = (n[0] == "H") ? {uur:10, minuut:5} : {uur:10, minuut:40};
     lesUren[4] = {uur:10, minuut:55}; //4e uur
     lesUren[5] = {uur:11, minuut:45}; //HAVO: pauze 2, VWO: 5e uur
-    lesUren[6] = (n == "H") ? {uur:12, minuut:10} : {uur:12, minuut:35};
+    lesUren[6] = (n[1] == "H") ? {uur:12, minuut:10} : {uur:12, minuut:35};
     lesUren[7] = {uur:13, minuut:0}; //6e uur
     lesUren[8] = {uur:13, minuut:50}; //7e uur
     lesUren[9] = {uur:14, minuut:40}; //pauze 3
@@ -52,9 +76,9 @@ function VakLokaal(u) {
         switch (u) {
             case 0 || 13:
                 u = ""; break;
-            case ((n=="H") ? 3 : 4): //BAM, zowel HAVO en VWO pauzes in 1 case gesodekankerd.
+            case ((n[0]=="H") ? 3 : 4): //BAM, zowel HAVO en VWO pauzes in 1 case gesodekankerd.
                 u = "P1"; v = "Pauze"; break;
-            case ((n=="H") ? 6 : 7):
+            case ((n[1]=="H") ? 6 : 7):
                 u = "P2"; v = "Pauze"; break;
             case 10:
                 u = "P3"; v = "Pauze"; break;
@@ -67,11 +91,16 @@ function VakLokaal(u) {
                 if (roosterinhoud != null) {
                     v = roosterinhoud.innerHTML;
                 } else {
-                    v = "&nbsp;"
+                    v = "&nbsp;";
                 }
                 if (v != "&nbsp;") {
+                    if (n.length == 3){ //leraar
+                        l = v.split("<br>")[1].split(" ")[1].replace("1","");
+                        v = v.split("<br>")[0] + " " + v.split("<br>")[1].split(" ")[0];
+                    } else { //leerling
                     l = v.split("<br>")[2].replace("1", "");
                     v = VakReplace(v.split("<br>")[0]);
+                    }
                 } else {
                     v = "";
                 }
