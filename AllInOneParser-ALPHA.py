@@ -172,6 +172,53 @@ def leerlingenlijsten():
         HTML.write(uiteindelijkeHTML.encode("utf8"))
         HTML.close()
     print "Setups klaar."
+def leraarlijsten():
+    print "================="
+    print "Setup"
+    print "================="
+    Bestand = open("lerarenlijst","r")
+    lerarenlijst = pickle.loads(Bestand.read())
+    Bestand.close()
+    html = ""
+    for leraar in lerarenlijst:
+        html += """<li data-theme="c">
+    <a href="../../index.html" data-ajax="false" onclick="localStorage.leerling = 'rooster/leraar/%s.html #rooster';" data-transition="none">
+    %s
+    </a>
+    </li>""" % (''.join(x for x in unicodedata.normalize('NFKD', leraar) if x in (string.ascii_letters + "-")),leraar)
+
+    html = """<!DOCTYPE html>
+    <html>
+    <head>
+    <title>A6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../css/jquery.mobile-1.2.0.min.css" />
+    <script src="../../js/cordova-2.3.0.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.mobile-1.2.0.min.js"></script>
+<body>
+
+<div data-role="page" >
+
+<div data-role="header" data-position="fixed">
+<a href="../../index.html" data-transition="none" data-icon="arrow-l" data-theme="a" data-role="button">Terug</a>
+<h1>Vandaag</h1>
+</div><!-- /header -->
+
+<div data-role="content">
+<h1 style="text-align:center">Leraren</h1>
+<ul data-role="listview" data-inset="true">
+%s
+</ul>
+</div><!-- /content -->
+</div><!-- /page -->
+
+</body>""" % html
+
+    HTML = open("%s/assets/www/rooster/leraar/setup.html" % os.getcwd(),"w")
+    HTML.write(html.encode("utf8"))
+    HTML.close()
 
 def leraarverbouwing():
     #Bestand openen en de inhoud in een string dumpen
@@ -204,7 +251,7 @@ def leraarverbouwing():
         for i in range(9):
             roosterTabel = roosterTabel.replace("u0%s"%str(i+1),str(i+1))
 
-        Replacements = [("Uur\Dag",""),("MTU","mt"),("<br>","<br />"),("maandag","Ma"),("dinsdag","Di"),("woensdag","Wo"),("donderdag","Do"),("vrijdag","Vr")]
+        Replacements = [("Uur\Dag",""),("MTU","mt"),("<br>","<br />"),("maandag","Ma"),("dinsdag","Di"),("woensdag","Wo"),("donderdag","Do"),("vrijdag","Vr"),("teamvergadering","team")]
 
         for r in Replacements:
             roosterTabel = roosterTabel.replace(r[0],r[1])
@@ -216,7 +263,14 @@ def leraarverbouwing():
             roosterUren[i] = "<tr>" + roosterUren[i]
             roosterDagen = roosterUren[i].split("<td>")
             for e in range(len(roosterDagen[1:])):
-                roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
+                try:
+                    vak = roosterDagen[e+1].split("<br />")[1].split(" ")[0]
+                    klas = roosterDagen[e+1].split("<br />")[0].replace(vak,"")
+                    lokaal = roosterDagen[e+1].split("<br />")[1].split(" ")[1][1:]
+
+                    roosterDagen[e+1] = "%s<br />%s %s"%(klas,vak,lokaal)
+                except: pass
+                roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1].lstrip("1")
             roosterUren[i] = "".join(roosterDagen)
 
         RoosterTabel = "".join(roosterTabel.split("<tr>")[:2] + roosterUren)
@@ -226,8 +280,8 @@ def leraarverbouwing():
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>%s</title>
-                <link rel="stylesheet" href="../../jquery.mobile-1.2.0.min.css" />
-                <script src="../../js.min.js">
+                <link rel="stylesheet" href="../jquery.mobile-1.2.0.min.css" />
+                <script src="../js.min.js">
                 </script>
 
             </head>
@@ -251,10 +305,10 @@ def leraarverbouwing():
         mapNaam = os.getcwd() + "/assets/www/rooster/leraar/"
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
-        NieuwBestand = open(mapNaam + "%s.html" % (leraarVoornaamNormalised),"w")
+        NieuwBestand = open(mapNaam + "%s.html" % leraarVoornaamNormalised,"w")
         NieuwBestand.write((beginHTML + u'\n<table style="width:100%;"><tr>' + RoosterTabel + u"\n" + eindHTML).encode('utf8'))
         NieuwBestand.close()
-        lerarenlijst.append((leraarVoornaam))
+        lerarenlijst.append(leraarVoornaam)
         llnr += 1
     LLbestand = open("lerarenlijst","w")
     LLbestand.write(pickle.dumps(lerarenlijst))
@@ -361,10 +415,10 @@ def onderverbouwing():
         mapNaam = os.getcwd() + "/assets/www/rooster/onderbouw/"
         if not os.path.exists(mapNaam):
             os.makedirs(mapNaam)
-        NieuwBestand = open(mapNaam + "%s.html" % (onderbouwKlas),"w")
+        NieuwBestand = open(mapNaam + "%s.html" % onderbouwKlas,"w")
         NieuwBestand.write((beginHTML + u'\n<table style="width:100%;">' + roosterTabel + u"\n" + eindHTML).encode('utf8'))
         NieuwBestand.close()
-        onderbouwlijst.append((onderbouwKlas))
+        onderbouwlijst.append(onderbouwKlas)
         llnr += 1
     LLbestand = open("onderbouwlijst","w")
     LLbestand.write(pickle.dumps(onderbouwlijst))
@@ -390,6 +444,7 @@ def leerling_starting():
 
 def leraar_starting():
     leraarverbouwing()
+    leraarlijsten()
     welkom.config(text="Lerarenroosters voltooid.")
     start2.config(text="Sluit.", command=afsluiten)
     

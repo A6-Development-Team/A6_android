@@ -16,8 +16,8 @@
 			
         function TTVLrepeater(){
 				if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
-					var t = document.getElementById("TTVLt").innerHTML.replace("</b> min","");
-					if(t>0 && (t%10 != 5)){
+					var t = document.getElementById("TTVLt").innerHTML.replace(" min","");
+					if(t>0 && (t%10 != 0)){
 						t -= 1;
 						document.getElementById("TTVLt").innerHTML =  t + " min";
 					} else {

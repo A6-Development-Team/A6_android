@@ -95,10 +95,10 @@ function VakLokaal(u) {
                 }
                 if (v != "&nbsp;") {
                     if (n.length == 3){ //leraar
-                        l = v.split("<br>")[1].split(" ")[1].replace("1","");
+                        l = v.split("<br>")[1].split(" ")[1];
                         v = v.split("<br>")[0] + " " + v.split("<br>")[1].split(" ")[0];
                     } else { //leerling
-                    l = v.split("<br>")[2].replace("1", "");
+                    l = v.split("<br>")[2].replace("1","");
                     v = VakReplace(v.split("<br>")[0]);
                     }
                 } else {
