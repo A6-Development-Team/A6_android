@@ -364,7 +364,7 @@ def onderverbouwing():
             roosterUren[i] = "<tr>" + roosterUren[i]
             roosterDagen = roosterUren[i].split("<td>")
             for e in range(len(roosterDagen[1:])):
-                roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(e+1),str(i+1))) + roosterDagen[e+1]
+                roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(i+1),str(e+1))) + roosterDagen[e+1] #str(e+q) en str(i+1) omgewisseld :)
             roosterUren[i] = "".join(roosterDagen)
 
         roosterTabel = "".join(roosterUren)
