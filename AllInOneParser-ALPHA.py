@@ -357,7 +357,7 @@ def onderverbouwing():
         #####DIT MOET DUS OP DE SCHOP:
         #####- TTVL Toewijzing ##BAM! DONE. IK HEB NOG EENS WAT GELEERD OP SCHOOL!
         #####- Rooster ombouwen? Verticaal ipv horizontaal... Beetje dom dat ik dat niet meteen door had :$
-        #roosterTabel = roosterTabel.split("""<td style="background-color: rgb(220, 220, 220);">u10</td>""")[0].rstrip().rstrip("<tr>")
+        roosterTabel = roosterTabel.split("""</table>""")[0].rstrip()
         roosterTabel += "\n</table>"
         roosterUren = roosterTabel.split("<tr>")[2:]
         for i in range(len(roosterUren)):
@@ -389,8 +389,8 @@ def onderverbouwing():
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>%s</title>
-                <link rel="stylesheet" href="../../jquery.mobile-1.2.0.min.css" />
-                <script src="../../js.min.js">
+                <link rel="stylesheet" href="../jquery.mobile-1.2.0.min.css" />
+                <script src="../js.min.js">
                 </script>
 
             </head>
