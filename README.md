@@ -2,9 +2,14 @@
 
 ##INFO
 
-* IN AANBOUW: Versie 12 (XII)
+* Versie: Versie 12 update 1(XIIi)
 * Platform: Android
 * Beschrijving: App voor afdeling vwo 6 van het OSG Sevenwolden, locatie Fedde Schurer.
+
+##CHANGELOG
+* Nieuwe roosters toegevoegd (2-2-13)
+* Lerarenroosters als beta mee, geen ruchtbaarheid aan geven
+* Laptopuitleen op de roosterpagina geramd, scheelt weer een keer tikken
 
 
 ##TIPS

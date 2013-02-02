@@ -7,7 +7,7 @@ def leerlingverbouwing():
     print "================="
     llnr = 0
     leerlingenlijst = []
-    while llnr < 703: #Even op 703 gezet, 404 vinden werkte niet
+    while llnr < 702: #Even op 703 gezet, 404 vinden werkte niet
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P3bovenbouw/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
         RoosterBestand.close()
@@ -227,7 +227,7 @@ def leraarverbouwing():
     print "================="
     llnr = 0
     lerarenlijst = []
-    while llnr < 95: #Tot 95, omdat 404 detection niet echt vlekkeloos werkt
+    while llnr < 94: #Tot 95, omdat 404 detection niet echt vlekkeloos werkt
         RoosterBestand = urllib.urlopen("https://files.itslearning.com/data/423/3904/P3docenten/%s.html"%str(llnr+1))
         beginRooster = RoosterBestand.read().decode("windows-1252")
         RoosterBestand.close()
@@ -433,6 +433,7 @@ def all_starting():
     leerlingenlijsten()
     onderverbouwing()
     leraarverbouwing()
+    leraarlijsten()
     welkom.config(text="Alle roosters voltooid.")
     start3.config(text="Sluit.", command=afsluiten)
 
