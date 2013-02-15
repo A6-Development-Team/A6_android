@@ -11,28 +11,6 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.2.0.min.js"></script>
 	<script src="js/TTVL.js"></script>
-    <script type="text/javascript">
-        var tijdNu = new Date();
-			
-        function TTVLrepeater(){
-				if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
-					var t = document.getElementById("TTVLt").innerHTML.replace(" min","");
-					if(t>0 && (t%10 != 0)){
-						t -= 1;
-						document.getElementById("TTVLt").innerHTML =  t + " min";
-					} else {
-						TijdVolgendeUur();
-					}
-				}
-        }
-        var repeater = setInterval(TTVLrepeater,30000);
-        document.addEventListener("resume", onresume, true);
-        document.addEventListener("deviceready", initPushwoosh, true);
-        $(window).bind('pageshow', function() { init(); });
-        function onresume() {clearInterval(repeater); var repeater = setInterval(TTVLrepeater,30000);}
-        function init() { $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
-        function pageshow() { TijdVolgendeUur();}
-    </script>
 </head>
 	
 <body onload="init();"> 
@@ -73,20 +51,33 @@
     </div><!--/card-->
    <!--Schedule-->
     <div id="schedulecard" class="card">
-        <h2 id="titel" class="titel">Rooster</h2>
+     <h2 class="titel">Rooster</h2>
         <div class="contents" id="rooster" style="margin-left:20px; margin-right:20px;"><a href="setup.html" data-role="button">Stel rooster in</a></div>
     </div>
    <!--/Schedule-->
-   <!--Helpful-->
-    <div id="helpfulcard" class="card">
-        <h2 id="helpfultitel" class="titel">Handige info</h2>
-        <div data-role="controlgroup" id="helpfullist" class="contents">
-            <a href="roosterwijzigingen.html" data-role="button" data-transition="none">Roosterwijzigingen</a>
-            <a href="#" data-role="button" onclick="window.open('https://files.itslearning.com/data/423/3904/P3docenten/index.html', '_blank')" data-transition="none">Lerarenrooster</a>
-        </div>
-    </div>
-    <!--/Helpful-->
 	</div>
 </div>
+<script type="text/javascript">
+        var tijdNu = new Date();
+			
+        function TTVLrepeater(){
+				if ((tijdNu.getHours()*60+tijdNu.getMinutes()) < 990){
+					var t = document.getElementById("TTVLt").innerHTML.replace(" min","");
+					if(t>0 && (t%10 != 0)){
+						t -= 1;
+						document.getElementById("TTVLt").innerHTML =  t + " min";
+					} else {
+						TijdVolgendeUur();
+					}
+				}
+        }
+        var repeater = setInterval(TTVLrepeater,30000);
+        document.addEventListener("resume", onresume, true);
+        document.addEventListener("deviceready", initPushwoosh, true);
+        $(window).bind('pageshow', function() { pageshow(); });
+        function onresume() {clearInterval(repeater); var repeater = setInterval(TTVLrepeater,30000);}
+        function init() { $('#rooster').load(localStorage.leerling, function() { TijdVolgendeUur(); });}
+        function pageshow() {init();}
+</script>
 </body>
 </html>

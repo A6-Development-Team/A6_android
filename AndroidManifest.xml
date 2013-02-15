@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.leonmelein.a5"
-    android:versionCode="33"
-    android:versionName="XIIi" android:installLocation="preferExternal">
+    android:versionCode="35"
+    android:versionName="XIII BETA 1" android:installLocation="preferExternal">
 
     <supports-screens 
     android:largeScreens="true" 

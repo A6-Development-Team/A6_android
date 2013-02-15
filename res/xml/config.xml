@@ -2,8 +2,9 @@
 <cordova>
     <access origin="http://127.0.0.1*"/>
     <access origin="https://cp.pushwoosh.com" subdomains="true" />
-	<access origin="https://www.thesociallions.nl" subdomains="true" />
-	<access origin="https://www.adfinitum.nl" subdomains="true" />
+	<access origin="http://thesociallions.nl" subdomains="true" />
+	<access origin="http://www.adfinitum.nl" subdomains="true" />
+	<content src="index.html" />
     <log level="DEBUG"/>
     <preference name="useBrowserHistory" value="true" />
     <preference name="exit-on-suspend" value="false" />
