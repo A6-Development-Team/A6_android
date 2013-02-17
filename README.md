@@ -2,14 +2,14 @@
 
 ##INFO
 
-* Versie: Versie 12 update 1(XIIi)
+* Versie: 12.2
 * Platform: Android
 * Beschrijving: App voor afdeling vwo 6 van het OSG Sevenwolden, locatie Fedde Schurer.
 
 ##CHANGELOG
-* Nieuwe roosters toegevoegd (2-2-13)
-* Lerarenroosters als beta mee, geen ruchtbaarheid aan geven
-* Laptopuitleen op de roosterpagina geramd, scheelt weer een keer tikken
+* Nieuwe roosters toegevoegd (15-2-13)
+* TTVL-toewijzing aan de onderkant, om ruimte te sparen op vandaagscherm
+* Terugknop instellen Vandaagscherm gefixt
 
 
 ##TIPS
@@ -19,7 +19,4 @@
 2. Android emulator is vreselijk traag. Zie www.developer.com/ws/android/development-tools/haxm-speeds-up-the-android-emulator.html
 voor tips om hem te versnellen. 
 
-
-
-
-*README.MD // VERSION 1.1 // THESOCIALLIONS*
+*README.MD // VERSION 1.2 // THESOCIALLIONS*
