@@ -23,19 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="5" selection-start="3076" selection-end="3076" vertical-scroll-proportion="0.73435116">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -48,19 +36,19 @@
         <option value="$PROJECT_DIR$/credits.html" />
         <option value="$PROJECT_DIR$/samenvattingen.html" />
         <option value="$PROJECT_DIR$/css/Cards.css" />
-        <option value="$PROJECT_DIR$/css/Cards.min.css" />
         <option value="$PROJECT_DIR$/js/TTVL.olddebug.js" />
         <option value="$PROJECT_DIR$/rw.html" />
-        <option value="$PROJECT_DIR$/tijden.html" />
         <option value="$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css" />
         <option value="$PROJECT_DIR$/laptop.html" />
         <option value="$PROJECT_DIR$/privacy.html" />
         <option value="$PROJECT_DIR$/js/TTVL.js" />
-        <option value="$PROJECT_DIR$/roosterwijzigingen.html" />
-        <option value="$PROJECT_DIR$/roosters.html" />
-        <option value="$PROJECT_DIR$/over.html" />
         <option value="$PROJECT_DIR$/setup.html" />
+        <option value="$PROJECT_DIR$/roosterwijzigingen.html" />
+        <option value="$PROJECT_DIR$/over.html" />
+        <option value="$PROJECT_DIR$/tijden.html" />
+        <option value="$PROJECT_DIR$/css/Cards.min.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/roosters.html" />
       </list>
     </option>
   </component>
@@ -77,13 +65,10 @@
           <State>
             <id />
           </State>
-          <State>
-            <id>Spelling</id>
-          </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>SpellCheckingInspection</id>
+            <id>Spelling</id>
           </State>
         </selected-state>
       </profile-state>
@@ -141,11 +126,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="Settings.JavaScript" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -290,39 +275,18 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="5" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1361280915428" expanded="true" signature="3258:3283" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tijden.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="2754" selection-end="2754" vertical-scroll-proportion="0.4412214" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/over.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="294" selection-start="4903" selection-end="4903" vertical-scroll-proportion="0.610687" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/privacy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="291" selection-start="1156" selection-end="1156" vertical-scroll-proportion="0.519084" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roosterwijzigingen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="1144" selection-end="1144" vertical-scroll-proportion="-13.423077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roosters.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="985" selection-end="985" vertical-scroll-proportion="0.54503816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="132" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.55988026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rooster/leraar/setup.html">
@@ -335,21 +299,60 @@
         <state line="1" column="49461" selection-start="49616" selection-end="49619" vertical-scroll-proportion="0.025914634" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="21" selection-start="20" selection-end="21" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/TTVL.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="51" selection-start="290" selection-end="290" vertical-scroll-proportion="0.27459618" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roosterwijzigingen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="45" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.73802394">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="0" selection-start="2857" selection-end="2897" vertical-scroll-proportion="0.9500734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="132" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.55988026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/over.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="6" selection-start="5288" selection-end="5288" vertical-scroll-proportion="-19.961538">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roosters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="35" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.41526717">
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="5" selection-start="3076" selection-end="3076" vertical-scroll-proportion="0.73435116">
+        <state line="67" column="46" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.6244275">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1361280915428" expanded="true" signature="3258:3283" placeholder="{...}" />
           </folding>
         </state>
       </provider>

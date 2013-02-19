@@ -19,6 +19,8 @@ import android.util.Log;
 import com.arellomobile.android.push.PushManager;
 import com.arellomobile.android.push.BasePushMessageReceiver;
 import com.arellomobile.android.push.exception.PushWooshException;
+import com.arellomobile.android.push.preference.SoundType;
+import com.arellomobile.android.push.preference.VibrateType;
 import com.google.android.gcm.GCMRegistrar;
 import org.apache.cordova.api.Plugin;
 import org.apache.cordova.api.PluginResult;
@@ -387,6 +389,7 @@ public class PushNotifications extends Plugin
 			}
 
 			mPushManager.setMultiNotificationMode();
+			return new PluginResult(Status.OK);
 		}
 
 		if("setSingleNotificationMode".equals(action))
@@ -397,6 +400,119 @@ public class PushNotifications extends Plugin
 			}
 
 			mPushManager.setSimpleNotificationMode();
+			return new PluginResult(Status.OK);
+		}
+
+		if("setSoundType".equals(action))
+		{
+			if (mPushManager == null)
+			{
+				return new PluginResult(Status.ERROR);
+			}
+
+			JSONObject params = null;
+			try
+			{
+				Integer type = (Integer)data.get(0);
+				if(type == null)
+					return new PluginResult(Status.ERROR);
+				
+				mPushManager.setSoundNotificationType(SoundType.fromInt(type));
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return new PluginResult(Status.ERROR);
+			}
+
+			return new PluginResult(Status.OK);
+		}
+
+		if("setVibrateType".equals(action))
+		{
+			if (mPushManager == null)
+			{
+				return new PluginResult(Status.ERROR);
+			}
+
+			JSONObject params = null;
+			try
+			{
+				Integer type = (Integer)data.get(0);
+				if(type == null)
+					return new PluginResult(Status.ERROR);
+				
+				mPushManager.setVibrateNotificationType(VibrateType.fromInt(type));
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return new PluginResult(Status.ERROR);
+			}
+
+			return new PluginResult(Status.OK);
+		}
+
+		if("setLightScreenOnNotification".equals(action))
+		{
+			if (mPushManager == null)
+			{
+				return new PluginResult(Status.ERROR);
+			}
+
+			JSONObject params = null;
+			try
+			{
+				boolean type = (boolean)data.getBoolean(0);
+				mPushManager.setLightScreenOnNotification(type);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return new PluginResult(Status.ERROR);
+			}
+
+			return new PluginResult(Status.OK);
+		}
+
+		if("sendGoalAchieved".equals(action))
+		{
+			if (mPushManager == null)
+			{
+				return new PluginResult(Status.ERROR);
+			}
+			
+			JSONObject params = null;
+			try
+			{
+				params = data.getJSONObject(0);
+			}
+			catch (JSONException e)
+			{
+				e.printStackTrace();
+				return new PluginResult(Status.ERROR);
+			}
+
+			try
+			{
+				//config params: {goal:"goalName", count:30}
+				String goal = params.getString("goal");
+				if(goal == null)
+					return new PluginResult(Status.ERROR);
+
+				Integer count = null;
+				if(params.has("count"))
+					count = params.getInt("count");
+
+				mPushManager.sendGoalAchieved(cordova.getActivity(), goal, count);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return new PluginResult(Status.ERROR);
+			}
+
+			return new PluginResult(Status.OK);
 		}
 
 		Log.d("DirectoryListPlugin", "Invalid action : " + action + " passed");
