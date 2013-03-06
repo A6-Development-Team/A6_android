@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'RobotoBoldCondensed';
+    src: url('font/Roboto-BoldCondensed-webfont.eot');
+    src: url('font/Roboto-BoldCondensed-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-BoldCondensed-webfont.woff') format('woff'), url('font/Roboto-BoldCondensed-webfont.ttf') format('truetype'), url('font/Roboto-BoldCondensed-webfont.svg#RobotoBoldCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('font/Roboto-Medium-webfont.eot');
+    src: url('font/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Medium-webfont.woff') format('woff'), url('font/Roboto-Medium-webfont.ttf') format('truetype'), url('font/Roboto-Medium-webfont.svg#RobotoMedium') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+/*font Decl*/
+
+#nu{
+    background-color: #F2F2F2;
+}
+#tijdtot{
+    background-color: #FAFAFA;
+}
+#straks{
+    background-color: #F2F2F2;
+}
+
+div.card {
+    background: #f8f8f8;
+    border-radius: 7.5px;
+    border-style: solid;
+    border-color: #bbb;
+    border-width: 1px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h2.titel {
+    font-family: "RobotoLight", Arial;
+    margin-left: 20px
+}
+
+div.uur {
+    width: 10%;
+    text-align: left;
+    display:block;
+    font-family: 'RobotoBoldCondensed', Arial, Helvetica;
+    line-height: 3;
+    margin-left: 20px
+}
+div.vak {
+    width: 80%;
+    text-align: center;
+    display:block;
+    font-family: 'RobotoMedium', Arial, "Helvetica Neue";
+    line-height: 3;
+}
+div.lokaal {
+    width: 10%;
+    text-align: right;
+    display:block;
+    font-family: 'RobotoBoldCondensed', Arial, Helvetica;
+    line-height: 3;
+    margin-right: 20px
+}
+#rooster {
+    font-family: 'RobotoMedium', Arial, Helvetica;
+}
+#helpfullist {
+    margin-left: 10px;
+    margin-right: 10px
+}

@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'RobotoBoldCondensed';
+    src: url('font/Roboto-BoldCondensed-webfont.eot');
+    src: url('font/Roboto-BoldCondensed-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-BoldCondensed-webfont.woff') format('woff'), url('font/Roboto-BoldCondensed-webfont.ttf') format('truetype'), url('font/Roboto-BoldCondensed-webfont.svg#RobotoBoldCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('font/Roboto-Light-webfont.eot');
+    src: url('font/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Light-webfont.woff') format('woff'), url('font/Roboto-Light-webfont.ttf') format('truetype'), url('font/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('font/Roboto-Medium-webfont.eot');
+    src: url('font/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'), url('font/Roboto-Medium-webfont.woff') format('woff'), url('font/Roboto-Medium-webfont.ttf') format('truetype'), url('font/Roboto-Medium-webfont.svg#RobotoMedium') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+div.card {
+    background: #f8f8f8;
+    border-radius: 7.5px;
+    border-style: solid;
+    border-color: #bbb;
+    border-width: 1px;
+    margin-bottom: 15px
+}
+
+h2.titel {
+    font-family: "RobotoLight", Arial;
+    margin-left: 20px
+}
+
+div.contents {
+    font-family: "RobotoMedium", Ari;
+    margin-bottom: 20px
+}
+
+div.ui-block-a {
+    width: 15%
+}
+
+div.ui-block-b {
+    width: 70%
+}
+
+div.ui-block-c {
+    width: 15%
+}
+
+div.nu {
+    background-color: #F2F2F2;
+}
+
+div.tijdtot{
+    background-color: #FAFAFA;
+}
+
+div.straks {
+    background-color: #F2F2F2;
+}
+
+h3.arrowL {
+    font-weight: bold;
+    line-height: 21px;
+    margin-left: 18px;
+    font-family: "RobotoBoldCondensed";
+    text-align: left
+}
+
+h3.arrowR {
+    font-weight: bold;
+    line-height: 21px;
+    margin-right: 18px;
+    font-family: "RobotoBoldCondensed";
+    text-align: right
+}
+
+#comingupcard {
+    margin-top: 1px;
+    height: 250px
+}
+
+#TTVLhu {
+    font-family: "RobotoBoldCondensed";
+    line-height: 21px;
+    margin-left: 20px
+}
+
+#TTVLhv {
+    font-family: "RobotoMedium";
+    text-align: center;
+    line-height: 56px
+}
+
+#TTVLhl {
+    font-family: "RobotoBoldCondensed";
+    margin-right: 20px;
+    text-align: right;
+    line-height: 56px
+}
+
+#TTVLt {
+    font-family: "RobotoLight";
+    text-align: center;
+    line-height: 56px
+}
+
+#TTVLvu {
+    font-family: "RobotoBoldCondensed";
+    line-height: 20px;
+    margin-left: 20px
+}
+
+#TTVLvv {
+    font-family: "RobotoMedium";
+    text-align: center;
+    line-height: 56px
+}
+
+#TTVLvl {
+    font-family: "RobotoBoldCondensed";
+    margin-right: 20px;
+    text-align: right;
+    line-height: 56px
+}
+
+#helpfullist {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "RobotoBoldCondensed";
+}
+
+#roosterw {
+    text-decoration: none;
+}

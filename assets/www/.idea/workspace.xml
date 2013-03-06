@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="9" />
-    <option name="ANALYSIS_IN_BACKGROUND" value="true" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="38072761-4340-4b6e-93ee-8d4587c218fb" name="Default" comment="" />
-    <ignored path="www.iws" />
+    <list default="true" id="09b6dee3-fe7d-4a3f-8d2a-2737b3214fe0" name="Default" comment="" />
+    <ignored path="A6_www.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,22 +29,14 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/credits.html" />
-        <option value="$PROJECT_DIR$/samenvattingen.html" />
-        <option value="$PROJECT_DIR$/css/Cards.css" />
-        <option value="$PROJECT_DIR$/js/TTVL.olddebug.js" />
-        <option value="$PROJECT_DIR$/rw.html" />
-        <option value="$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css" />
-        <option value="$PROJECT_DIR$/laptop.html" />
-        <option value="$PROJECT_DIR$/privacy.html" />
-        <option value="$PROJECT_DIR$/js/TTVL.js" />
-        <option value="$PROJECT_DIR$/setup.html" />
+        <option value="$PROJECT_DIR$/js/jquery.mob.js" />
+        <option value="$PROJECT_DIR$/css/ttvl.css" />
+        <option value="$PROJECT_DIR$/css/cards.css" />
+        <option value="$PROJECT_DIR$/roosters.html" />
         <option value="$PROJECT_DIR$/roosterwijzigingen.html" />
         <option value="$PROJECT_DIR$/over.html" />
-        <option value="$PROJECT_DIR$/tijden.html" />
-        <option value="$PROJECT_DIR$/css/Cards.min.css" />
+        <option value="$PROJECT_DIR$/js/init.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/roosters.html" />
       </list>
     </option>
   </component>
@@ -58,23 +46,7 @@
     <option name="width" value="1456" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Spelling</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -105,17 +77,17 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="A6_www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="A6_www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="A6_www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -124,13 +96,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="Settings.JavaScript" />
-    <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -143,56 +109,25 @@
       </server>
     </servers>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.laptop.html">
-    <configuration default="false" name="laptop.html" type="JavascriptDebugSession" factoryName="Local" temporary="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="chrome" />
-        <option name="fileUrl" value="file://$PROJECT_DIR$/index.html" />
-      </JSDebuggerConfigurationSettings>
-      <RunnerSettings RunnerId="JavascriptDebugRunner" />
-      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.laptop.html" />
-    </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.laptop.html" />
-      </list>
-    </recent_temporary>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Léon\Documents\GitHub\A6_www" />
+      <recent name="C:\Users\Léon\Documents\GitHub\A6_www\js" />
+      <recent name="C:\Users\Léon\Documents\GitHub\A6_www\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Léon\Documents\GitHub\A6_www\css" />
+      <recent name="C:\Users\Léon\Documents\GitHub\A6_www\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38072761-4340-4b6e-93ee-8d4587c218fb" name="Default" comment="" />
-      <created>1358597912240</created>
-      <updated>1358597912240</updated>
+      <created>1361380284888</created>
+      <updated>1361380284888</updated>
     </task>
     <servers />
   </component>
@@ -200,22 +135,23 @@
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21806633" sideWeight="0.32684284" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21806633" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.49752998" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12844037" sideWeight="0.09090909" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991655" sideWeight="0.49752998" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22668579" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.53069866" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -250,7 +186,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" />
@@ -270,43 +206,66 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
-  <component name="XPathView.XPathProjectComponent">
-    <history />
-    <find-history />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/jquery.mob.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="5" selection-start="2905" selection-end="2905" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1361280915428" expanded="true" signature="3258:3283" placeholder="{...}" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/PushNotification.js">
+    <entry file="file://$PROJECT_DIR$/css/jquery.mob.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="1" selection-start="4576" selection-end="4576" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rooster/leraar/setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/jquery.mobile-1.2.0.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49461" selection-start="49616" selection-end="49619" vertical-scroll-proportion="0.025914634" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/TTVL.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="290" selection-end="290" vertical-scroll-proportion="0.27459618" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/push.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cordova.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="755" column="133" selection-start="24369" selection-end="24369" vertical-scroll-proportion="0.21732746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ttvl.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="915" selection-end="957" vertical-scroll-proportion="0.07488987">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="23" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.72540385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roosters.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="151" selection-end="151" vertical-scroll-proportion="-0.8824428">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roosterwijzigingen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="45" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.73802394">
+        <state line="12" column="18" selection-start="441" selection-end="441" vertical-scroll-proportion="0.30538923">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -314,64 +273,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/Cards.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="2857" selection-end="2897" vertical-scroll-proportion="0.9500734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="132" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.55988026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/over.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="6" selection-start="5288" selection-end="5288" vertical-scroll-proportion="-19.961538">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="8" column="40" selection-start="290" selection-end="290" vertical-scroll-proportion="0.20763358">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roosters.html">
+    <entry file="file://$PROJECT_DIR$/js/init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="35" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.41526717">
+        <state line="25" column="29" selection-start="973" selection-end="973" vertical-scroll-proportion="0.46541786">
           <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#154#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="46" selection-start="2787" selection-end="2787" vertical-scroll-proportion="0.6244275">
+        <state line="9" column="38" selection-start="338" selection-end="338" vertical-scroll-proportion="-0.6229008">
           <folding>
-            <marker date="1361280915428" expanded="true" signature="3258:3283" placeholder="{...}" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
 
