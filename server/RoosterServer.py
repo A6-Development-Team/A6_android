@@ -364,7 +364,7 @@ def onderverbouwing():
                 roosterDagen[e+1] = ('<td id="TTVLd%su%s">' % (str(i+1),str(e+1))) + roosterDagen[e+1] #str(e+q) en str(i+1) omgewisseld :)
             roosterUren[i] = "".join(roosterDagen)
 
-        roosterTabel = "".join(roosterUren)
+        roosterTabel = "".join(roosterUren).split("</table>")[0]+"</table>" #yeah, lelijk, I know...
 
 
         ##TTVL Toewijzing
@@ -386,8 +386,8 @@ def onderverbouwing():
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>%s</title>
-                <link rel="stylesheet" href="../../jquery.mobile-1.2.0.min.css" />
-                <script src="../../js.min.js">
+                <link rel="stylesheet" href="../jquery.mobile-1.2.0.min.css" />
+                <script src="../js.min.js">
                 </script>
 
             </head>
@@ -460,4 +460,3 @@ def zipping():
     print "> Ingepakt, dus wegwezen!"
 	
 check()
-
